@@ -1,0 +1,137 @@
+name: Fetch Steam Game Data
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight
+  workflow_dispatch:  # Allow manual trigger
+  push:
+    paths:
+      - 'AppID/**/achievements.json'  # Trigger when achievements.json is added/updated
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4
+
+      - name: Fetch game data
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+        run: |
+          python - <<'EOF'
+          import os
+          import json
+          import requests
+          from pathlib import Path
+          import time
+
+          STEAM_API_KEY = os.environ.get('STEAM_API_KEY', '')
+
+          # Find all AppID folders
+          appid_dir = Path('AppID')
+          if not appid_dir.exists():
+              print("No AppID directory found")
+              exit(0)
+
+          appids = []
+          for folder in appid_dir.iterdir():
+              if folder.is_dir() and folder.name.isdigit():
+                  achievements_file = folder / 'achievements.json'
+                  if achievements_file.exists():
+                      appids.append(folder.name)
+
+          print(f"Found {len(appids)} games with achievements")
+
+          all_game_data = []
+
+          for appid in appids:
+              print(f"Processing AppID {appid}...")
+              
+              game_info = {
+                  'appid': appid,
+                  'name': f'Game {appid}',
+                  'icon': '',
+                  'achievements': {}
+              }
+
+              try:
+                  # Fetch from Steam Store API
+                  store_url = f'https://store.steampowered.com/api/appdetails?appids={appid}'
+                  store_response = requests.get(store_url, timeout=10)
+                  
+                  if store_response.ok:
+                      store_data = store_response.json()
+                      if appid in store_data and store_data[appid].get('success'):
+                          data = store_data[appid]['data']
+                          game_info['name'] = data.get('name', f'Game {appid}')
+                          game_info['icon'] = data.get('header_image', '')
+                          print(f"  ✓ Got game info: {game_info['name']}")
+                  
+                  time.sleep(1.5)  # Rate limiting
+
+                  # Fetch achievement schema from Steam API
+                  if STEAM_API_KEY:
+                      schema_url = f'https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key={STEAM_API_KEY}&appid={appid}'
+                      schema_response = requests.get(schema_url, timeout=10)
+                      
+                      if schema_response.ok:
+                          schema_data = schema_response.json()
+                          achievements = schema_data.get('game', {}).get('availableGameStats', {}).get('achievements', [])
+                          
+                          for ach in achievements:
+                              game_info['achievements'][ach['name']] = {
+                                  'name': ach.get('displayName', ach['name']),
+                                  'description': ach.get('description', ''),
+                                  'icon': ach.get('icon', ''),
+                                  'icongray': ach.get('icongray', '')
+                              }
+                          
+                          print(f"  ✓ Got {len(achievements)} achievement details")
+                      
+                      time.sleep(1.5)  # Rate limiting
+
+              except Exception as e:
+                  print(f"  ✗ Error: {e}")
+
+              # Save individual game-info.json
+              game_info_path = Path(f'AppID/{appid}/game-info.json')
+              with open(game_info_path, 'w', encoding='utf-8') as f:
+                  json.dump(game_info, f, indent=2, ensure_ascii=False)
+
+              # Load achievements.json to merge
+              achievements_path = Path(f'AppID/{appid}/achievements.json')
+              with open(achievements_path, 'r', encoding='utf-8') as f:
+                  achievements_data = json.load(f)
+              
+              all_game_data.append({
+                  'appid': appid,
+                  'info': game_info,
+                  'achievements': achievements_data
+              })
+
+          # Save combined game-data.json
+          with open('game-data.json', 'w', encoding='utf-8') as f:
+              json.dump(all_game_data, f, indent=2, ensure_ascii=False)
+
+          print(f"\n✓ Processed {len(appids)} games successfully")
+          EOF
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add AppID/*/game-info.json game-data.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update game data from Steam"
+          git push
