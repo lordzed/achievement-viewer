@@ -95,7 +95,8 @@ jobs:
                                   'name': ach.get('displayName', ach['name']),
                                   'description': ach.get('description', ''),
                                   'icon': ach.get('icon', ''),
-                                  'icongray': ach.get('icongray', '')
+                                  'icongray': ach.get('icongray', ''),
+                                  'hidden': ach.get('hidden', 0) == 1  # Check if achievement is hidden
                               }
                           
                           print(f"  ✓ Got {len(achievements)} achievement details")
