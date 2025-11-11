@@ -835,8 +835,11 @@
             function renderAchievement(ach, isUnlocked) {
                 const rarityNum = ach.rarity !== null && ach.rarity !== undefined ? parseFloat(ach.rarity) : null;
                 const isRare = rarityNum !== null && !isNaN(rarityNum) && rarityNum < 10;
-                const showDescription = isUnlocked || !ach.hidden;
-                const description = showDescription ? ach.description : 'Hidden achievement';
+                
+                // For locked achievements, check if it's hidden
+                const isHidden = ach.hidden === true || ach.hidden === 1;
+                const showDescription = isUnlocked || !isHidden;
+                const description = showDescription ? (ach.description || 'No description') : 'Hidden achievement';
                 
                 return `
                     <div class="achievement ${isUnlocked ? 'unlocked' : 'locked'}">
@@ -845,7 +848,7 @@
                             `<div class="achievement-icon ${isRare ? 'rare-glow' : ''}"></div>`}
                         <div class="achievement-info">
                             <div class="achievement-name">${ach.name}</div>
-                            <div class="achievement-desc ${!showDescription ? 'hidden-desc' : ''}">${description}</div>
+                            <div class="achievement-desc ${!showDescription || isHidden ? 'hidden-desc' : ''}">${description}</div>
                             ${isUnlocked && ach.unlocktime ? 
                                 `<div class="achievement-unlock-time">Unlocked: ${new Date(ach.unlocktime * 1000).toLocaleDateString()}</div>` : 
                                 ''}
