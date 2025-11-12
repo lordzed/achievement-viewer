@@ -79,18 +79,27 @@ jobs:
               """Scrape hidden achievement descriptions from a Steam profile page"""
               try:
                   url = f'https://steamcommunity.com/profiles/{steam_id}/stats/{appid}'
-                  response = requests.get(url, timeout=10)
+                  print(f"    → Trying profile {steam_id}...")
+                  response = requests.get(url, timeout=15)
                   
                   if response.status_code != 200:
+                      print(f"    ✗ Profile returned status {response.status_code}")
                       return {}
                   
                   soup = BeautifulSoup(response.text, 'html.parser')
                   achievements = {}
                   
                   # Find all achievement rows
-                  for row in soup.find_all('div', class_='achieveRow'):
+                  achieve_rows = soup.find_all('div', class_='achieveRow')
+                  if not achieve_rows:
+                      print(f"    ✗ No achievement data found on profile page")
+                      return {}
+                  
+                  print(f"    → Found {len(achieve_rows)} achievements on profile page")
+                  
+                  for row in achieve_rows:
                       try:
-                          # Get achievement name (API name is in the class)
+                          # Get achievement name
                           name_elem = row.find('h3')
                           if not name_elem:
                               continue
@@ -100,6 +109,9 @@ jobs:
                           # Get description
                           desc_elem = row.find('h5')
                           ach_desc = desc_elem.text.strip() if desc_elem else ''
+                          
+                          if not ach_desc:
+                              continue
                           
                           # Try to find the API name from image src
                           img = row.find('img')
@@ -120,12 +132,21 @@ jobs:
                       except Exception as e:
                           continue
                   
+                  if achievements:
+                      print(f"    ✓ Extracted {len(achievements)} achievement descriptions")
+                  else:
+                      print(f"    ✗ Could not extract any descriptions")
+                  
                   return achievements
+              except requests.exceptions.Timeout:
+                  print(f"    ✗ Request timed out")
+                  return {}
               except Exception as e:
+                  print(f"    ✗ Error: {e}")
                   return {}
 
           for appid in appids:
-              print(f"Processing AppID {appid}...")
+              print(f"\nProcessing AppID {appid}...")
               
               game_info = {
                   'appid': appid,
@@ -156,7 +177,10 @@ jobs:
                   achievements_from_xml = {}
                   if xml_response.ok:
                       try:
-                          root = ET.fromstring(xml_response.content)
+                          # Clean XML content to handle malformed entities
+                          xml_content = xml_response.content
+                          root = ET.fromstring(xml_content)
+                          
                           for ach in root.findall('.//achievement'):
                               icon_closed = ach.find('iconClosed')
                               icon_open = ach.find('iconOpen')
@@ -178,8 +202,9 @@ jobs:
                                   achievements_from_xml[api_name.text] = ach_data
                           
                           print(f"  ✓ Got {len(achievements_from_xml)} achievements from XML")
-                      except Exception as e:
+                      except ET.ParseError as e:
                           print(f"  ✗ Error parsing XML: {e}")
+                          print(f"  → Will rely on API data and profile scraping")
                   
                   time.sleep(1.5)
 
@@ -220,24 +245,45 @@ jobs:
                           # Try to scrape hidden achievement descriptions
                           if hidden_achievements:
                               print(f"  → Found {len(hidden_achievements)} hidden achievements without descriptions")
-                              print(f"  → Scraping profile pages for descriptions...")
+                              print(f"  → Attempting to scrape from profile pages...")
                               
-                              for steam_id in TOP_OWNER_IDS[:10]:  # Try first 10 profiles
+                              profiles_tried = 0
+                              descriptions_found = 0
+                              
+                              for steam_id in TOP_OWNER_IDS[:20]:  # Try first 20 profiles
+                                  profiles_tried += 1
                                   scraped = scrape_hidden_achievements(appid, steam_id)
+                                  
                                   if scraped:
                                       for api_name, data in scraped.items():
                                           if api_name in game_info['achievements']:
                                               if not game_info['achievements'][api_name]['description']:
                                                   game_info['achievements'][api_name]['description'] = data['description']
+                                                  descriptions_found += 1
+                                                  print(f"    ✓ Found description for '{data['name']}'")
                                       
                                       # Check if we got all descriptions
                                       missing = sum(1 for api_name in hidden_achievements 
                                                   if not game_info['achievements'][api_name]['description'])
+                                      
+                                      print(f"    → Progress: {descriptions_found} found, {missing} still missing")
+                                      
                                       if missing == 0:
-                                          print(f"  ✓ Got all hidden achievement descriptions!")
+                                          print(f"  ✓ Got all hidden achievement descriptions from {profiles_tried} profiles!")
                                           break
                                   
                                   time.sleep(2)  # Be nice to Steam servers
+                              
+                              # Final summary
+                              final_missing = sum(1 for api_name in hidden_achievements 
+                                                if not game_info['achievements'][api_name]['description'])
+                              
+                              if final_missing > 0:
+                                  print(f"  ! Could not find descriptions for {final_missing} hidden achievements after trying {profiles_tried} profiles")
+                              else:
+                                  print(f"  ✓ Successfully found all {len(hidden_achievements)} hidden achievement descriptions!")
+                          else:
+                              print(f"  → All hidden achievements already have descriptions")
                       
                       time.sleep(1.5)
 
@@ -260,6 +306,8 @@ jobs:
 
               except Exception as e:
                   print(f"  ✗ Error: {e}")
+                  import traceback
+                  traceback.print_exc()
 
               # Save individual game-info.json
               game_info_path = Path(f'AppID/{appid}/game-info.json')
