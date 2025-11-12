@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4
+          pip install requests beautifulsoup4 lxml
 
       - name: Fetch game data
         env:
@@ -38,10 +38,11 @@ jobs:
           import time
           import xml.etree.ElementTree as ET
           from bs4 import BeautifulSoup
+          import re
 
           STEAM_API_KEY = os.environ.get('STEAM_API_KEY', '')
 
-          # Top owner Steam IDs (users with lots of games and achievements)
+          # Top owner Steam IDs
           TOP_OWNER_IDS = [
               76561198028121353, 76561197979911851, 76561198017975643, 76561197993544755,
               76561198355953202, 76561198001237877, 76561198237402290, 76561198152618007,
@@ -51,14 +52,8 @@ jobs:
               76561197976597747, 76561197969810632, 76561198095049646, 76561198085065107,
               76561198864213876, 76561197962473290, 76561198388522904, 76561198033715344,
               76561197995070100, 76561198313790296, 76561198063574735, 76561197996432822,
-              76561197976968076, 76561198281128349, 76561198154462478, 76561198027233260,
-              76561198842864763, 76561198010615256, 76561198035900006, 76561198122859224,
-              76561198235911884, 76561198027214426, 76561197970825215, 76561197968410781,
-              76561198104323854, 76561198001221571, 76561198256917957, 76561198008181611,
-              76561198407953371, 76561198062901118, 76561197979667190, 76561197974742349,
           ]
 
-          # Find all AppID folders
           appid_dir = Path('AppID')
           if not appid_dir.exists():
               print("No AppID directory found")
@@ -72,13 +67,12 @@ jobs:
                       appids.append(folder.name)
 
           print(f"Found {len(appids)} games with achievements")
-
           all_game_data = []
 
-          def scrape_hidden_achievements(appid, steam_id):
-              """Scrape hidden achievement descriptions from a Steam profile page"""
+          def scrape_hidden_achievements(appid, steam_id, achievement_names_map):
+              """Scrape hidden achievement descriptions from profile page"""
               try:
-                  url = f'https://steamcommunity.com/profiles/{steam_id}/stats/{appid}'
+                  url = f'https://steamcommunity.com/profiles/{steam_id}/stats/{appid}/achievements'
                   print(f"    → Trying profile {steam_id}...")
                   response = requests.get(url, timeout=15)
                   
@@ -89,58 +83,48 @@ jobs:
                   soup = BeautifulSoup(response.text, 'html.parser')
                   achievements = {}
                   
-                  # Find all achievement rows
                   achieve_rows = soup.find_all('div', class_='achieveRow')
                   if not achieve_rows:
-                      print(f"    ✗ No achievement data found on profile page")
+                      print(f"    ✗ No achievement data found")
                       return {}
                   
-                  print(f"    → Found {len(achieve_rows)} achievements on profile page")
+                  print(f"    → Found {len(achieve_rows)} achievements on page")
                   
                   for row in achieve_rows:
                       try:
-                          # Get achievement name
+                          # Get display name
                           name_elem = row.find('h3')
                           if not name_elem:
                               continue
                           
-                          ach_name = name_elem.text.strip()
+                          display_name = name_elem.text.strip()
                           
                           # Get description
                           desc_elem = row.find('h5')
-                          ach_desc = desc_elem.text.strip() if desc_elem else ''
-                          
-                          if not ach_desc:
+                          if not desc_elem:
                               continue
                           
-                          # Try to find the API name from image src
-                          img = row.find('img')
-                          api_name = None
-                          if img and 'src' in img.attrs:
-                              src = img['src']
-                              # Extract from URL like: /public/images/apps/APPID/APINAME.jpg
-                              parts = src.split('/')
-                              if len(parts) > 0:
-                                  filename = parts[-1]
-                                  api_name = filename.replace('.jpg', '').replace('.png', '')
+                          description = desc_elem.text.strip()
+                          if not description:
+                              continue
                           
-                          if api_name and ach_desc:
+                          # Match display name to API name using our map
+                          api_name = achievement_names_map.get(display_name.lower())
+                          
+                          if api_name:
                               achievements[api_name] = {
-                                  'name': ach_name,
-                                  'description': ach_desc
+                                  'name': display_name,
+                                  'description': description
                               }
+                          
                       except Exception as e:
                           continue
                   
                   if achievements:
-                      print(f"    ✓ Extracted {len(achievements)} achievement descriptions")
-                  else:
-                      print(f"    ✗ Could not extract any descriptions")
+                      print(f"    ✓ Matched {len(achievements)} achievement API names")
                   
                   return achievements
-              except requests.exceptions.Timeout:
-                  print(f"    ✗ Request timed out")
-                  return {}
+                  
               except Exception as e:
                   print(f"    ✗ Error: {e}")
                   return {}
@@ -170,17 +154,14 @@ jobs:
                   
                   time.sleep(1.5)
 
-                  # Fetch from Community Data XML
+                  # Fetch from Community XML
                   xml_url = f'https://steamcommunity.com/stats/{appid}/achievements/?xml=1'
                   xml_response = requests.get(xml_url, timeout=10)
                   
                   achievements_from_xml = {}
                   if xml_response.ok:
                       try:
-                          # Clean XML content to handle malformed entities
-                          xml_content = xml_response.content
-                          root = ET.fromstring(xml_content)
-                          
+                          root = ET.fromstring(xml_response.content)
                           for ach in root.findall('.//achievement'):
                               icon_closed = ach.find('iconClosed')
                               icon_open = ach.find('iconOpen')
@@ -203,13 +184,14 @@ jobs:
                           
                           print(f"  ✓ Got {len(achievements_from_xml)} achievements from XML")
                       except ET.ParseError as e:
-                          print(f"  ✗ Error parsing XML: {e}")
-                          print(f"  → Will rely on API data and profile scraping")
+                          print(f"  ✗ XML parse error: {e}")
                   
                   time.sleep(1.5)
 
-                  # Fetch achievement schema from Steam API
+                  # Fetch achievement schema from API
                   hidden_achievements = []
+                  achievement_names_map = {}  # Map display name -> API name
+                  
                   if STEAM_API_KEY:
                       schema_url = f'https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key={STEAM_API_KEY}&appid={appid}'
                       schema_response = requests.get(schema_url, timeout=10)
@@ -221,17 +203,20 @@ jobs:
                           for ach in achievements:
                               api_name = ach['name']
                               is_hidden = ach.get('hidden', 0) == 1
+                              display_name = ach.get('displayName', ach['name'])
+                              
+                              # Build name mapping (lowercase for matching)
+                              achievement_names_map[display_name.lower()] = api_name
                               
                               if api_name in achievements_from_xml:
                                   game_info['achievements'][api_name] = achievements_from_xml[api_name].copy()
                                   game_info['achievements'][api_name]['hidden'] = is_hidden
                                   
-                                  # Track hidden achievements with no description
                                   if is_hidden and not game_info['achievements'][api_name]['description']:
                                       hidden_achievements.append(api_name)
                               else:
                                   game_info['achievements'][api_name] = {
-                                      'name': ach.get('displayName', ach['name']),
+                                      'name': display_name,
                                       'description': ach.get('description', ''),
                                       'icon': ach.get('icon', ''),
                                       'icongray': ach.get('icongray', ''),
@@ -240,19 +225,19 @@ jobs:
                                   if is_hidden and not ach.get('description'):
                                       hidden_achievements.append(api_name)
                           
-                          print(f"  ✓ Merged {len(achievements)} achievements with hidden flags")
+                          print(f"  ✓ Merged {len(achievements)} achievements")
                           
-                          # Try to scrape hidden achievement descriptions
+                          # Scrape for hidden achievements
                           if hidden_achievements:
                               print(f"  → Found {len(hidden_achievements)} hidden achievements without descriptions")
-                              print(f"  → Attempting to scrape from profile pages...")
+                              print(f"  → Scraping profile pages...")
                               
                               profiles_tried = 0
                               descriptions_found = 0
                               
-                              for steam_id in TOP_OWNER_IDS[:20]:  # Try first 20 profiles
+                              for steam_id in TOP_OWNER_IDS[:20]:
                                   profiles_tried += 1
-                                  scraped = scrape_hidden_achievements(appid, steam_id)
+                                  scraped = scrape_hidden_achievements(appid, steam_id, achievement_names_map)
                                   
                                   if scraped:
                                       for api_name, data in scraped.items():
@@ -260,34 +245,30 @@ jobs:
                                               if not game_info['achievements'][api_name]['description']:
                                                   game_info['achievements'][api_name]['description'] = data['description']
                                                   descriptions_found += 1
-                                                  print(f"    ✓ Found description for '{data['name']}'")
+                                                  print(f"    ✓ Found: '{data['name']}' -> '{data['description'][:50]}...'")
                                       
-                                      # Check if we got all descriptions
                                       missing = sum(1 for api_name in hidden_achievements 
                                                   if not game_info['achievements'][api_name]['description'])
                                       
-                                      print(f"    → Progress: {descriptions_found} found, {missing} still missing")
+                                      print(f"    → Progress: {descriptions_found}/{len(hidden_achievements)} found, {missing} missing")
                                       
                                       if missing == 0:
-                                          print(f"  ✓ Got all hidden achievement descriptions from {profiles_tried} profiles!")
+                                          print(f"  ✓ Got all hidden descriptions from {profiles_tried} profiles!")
                                           break
                                   
-                                  time.sleep(2)  # Be nice to Steam servers
+                                  time.sleep(2)
                               
-                              # Final summary
                               final_missing = sum(1 for api_name in hidden_achievements 
                                                 if not game_info['achievements'][api_name]['description'])
                               
                               if final_missing > 0:
-                                  print(f"  ! Could not find descriptions for {final_missing} hidden achievements after trying {profiles_tried} profiles")
+                                  print(f"  ! Still missing {final_missing} descriptions after {profiles_tried} profiles")
                               else:
-                                  print(f"  ✓ Successfully found all {len(hidden_achievements)} hidden achievement descriptions!")
-                          else:
-                              print(f"  → All hidden achievements already have descriptions")
+                                  print(f"  ✓ All {len(hidden_achievements)} hidden descriptions found!")
                       
                       time.sleep(1.5)
 
-                      # Fetch global achievement percentages
+                      # Fetch percentages
                       percent_url = f'https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid={appid}'
                       percent_response = requests.get(percent_url, timeout=10)
                       
@@ -300,7 +281,7 @@ jobs:
                               if ach_name in game_info['achievements']:
                                   game_info['achievements'][ach_name]['percent'] = ach_percent.get('percent', 0)
                           
-                          print(f"  ✓ Got achievement percentages")
+                          print(f"  ✓ Got percentages")
                       
                       time.sleep(1.5)
 
@@ -309,12 +290,11 @@ jobs:
                   import traceback
                   traceback.print_exc()
 
-              # Save individual game-info.json
+              # Save files
               game_info_path = Path(f'AppID/{appid}/game-info.json')
               with open(game_info_path, 'w', encoding='utf-8') as f:
                   json.dump(game_info, f, indent=2, ensure_ascii=False)
 
-              # Load achievements.json to merge
               achievements_path = Path(f'AppID/{appid}/achievements.json')
               with open(achievements_path, 'r', encoding='utf-8') as f:
                   achievements_data = json.load(f)
@@ -325,11 +305,10 @@ jobs:
                   'achievements': achievements_data
               })
 
-          # Save combined game-data.json
           with open('game-data.json', 'w', encoding='utf-8') as f:
               json.dump(all_game_data, f, indent=2, ensure_ascii=False)
 
-          print(f"\n✓ Processed {len(appids)} games successfully")
+          print(f"\n✓ Processed {len(appids)} games")
           EOF
 
       - name: Commit changes
@@ -337,5 +316,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add AppID/*/game-info.json game-data.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update game data from Steam"
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update game data"
           git push
