@@ -10,7 +10,10 @@ So far this is what I achieved.
 ### 1. Fork this Repository
 Click the "Fork" button at the top right of this page.
 
-### 2. Enable GitHub Pages
+### 2. Delete game-data.json and the folders inside AppID
+(These contain the unlocked achievement data to show on the page. This has to be done to prevent the merge my achievements with your own)
+
+### 3. Enable GitHub Pages
 1. Go to your forked repository's **Settings**
 2. Click **Pages** in the left sidebar
 3. Under "Source", select **Deploy from a branch**
@@ -20,19 +23,19 @@ Click the "Fork" button at the top right of this page.
 
 Your site will be available at: `https://YOUR-USERNAME.github.io/REPO-NAME/`
 
-### 3. Get Your Steam API Key (Optional but Recommended)
+### 4. Get Your Steam API Key (Optional but Recommended)
 1. Go to https://steamcommunity.com/dev/apikey
 2. Enter any domain name (e.g., `localhost`)
 3. Agree to terms and copy your API key
 
-### 4. Add GitHub Secret (Optional but Recommended)
+### 5. Add GitHub Secret (Optional but Recommended)
 1. In your repository, go to **Settings** → **Secrets and variables** → **Actions**
 2. Click **New repository secret**
 3. Add: `STEAM_API_KEY` with your Steam API key as the value
 
 **Note:** The API key is only needed if you want the workflow to automatically fetch game data. If you're manually uploading achievement files, you can skip this step.
 
-### 5. Add Your Achievement Files
+### 6. Add Your Achievement Files
 
 #### Option A: Manual Upload (No API Key Needed)
 1. Create folder structure: `AppID/[game-app-id]/achievements.json`
@@ -52,7 +55,7 @@ Your site will be available at: `https://YOUR-USERNAME.github.io/REPO-NAME/`
    - Generate `game-info.json` for each game
    - Create `game-data.json` with all data
 
-### 6. Achievement JSON Format
+### 7. Achievement JSON Format
 
 Your `achievements.json` should look like this:
 ```json
@@ -81,7 +84,7 @@ Your `achievements.json` should look like this:
 - `earned_time`: Unix timestamp when unlocked (0 if locked)
 - `icon` and `icon_gray`: URLs to achievement icons (optional, workflow can fetch these)
 
-### 7. Verify It's Working
+### 8. Verify It's Working
 Visit your GitHub Pages URL and you should see your achievement viewer!
 
 ## 📁 Folder Structure
