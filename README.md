@@ -198,4 +198,4 @@ Free to use and modify!
 
 ---
 
-Made for GBE fork users with Claude AI.
+Made for GBE fork users with Claude AI and tried to use alex47exe's gse_fork_tools logic for Hidden achievement retrieval.
