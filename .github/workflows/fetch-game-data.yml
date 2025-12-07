@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - 'AppID/**/achievements.json'
+      - 'AppID/**/*.db'
 
 permissions:
   contents: write
@@ -71,11 +72,11 @@ jobs:
                   )
                   changed_files = result.stdout.strip().split('\n')
                   
-                  # Extract AppIDs from changed achievements.json files
+                  # Extract AppIDs from changed achievements files
                   changed_appids = set()
                   for file in changed_files:
-                      # Match pattern: AppID/123456/achievements.json
-                      match = re.match(r'AppID/(\d+)/achievements\.json', file)
+                      # Match pattern: AppID/123456/achievements.json or AppID/123456/123456.db
+                      match = re.match(r'AppID/(\d+)/(achievements\.json|\d+\.db)', file)
                       if match:
                           changed_appids.add(match.group(1))
                   
@@ -89,6 +90,52 @@ jobs:
               print("No AppID directory found")
               exit(0)
 
+          def load_achievements_file(folder):
+              """Load achievements from either .json or {appid}.db file"""
+              appid = folder.name
+              
+              # Try achievements.json first
+              json_file = folder / 'achievements.json'
+              if json_file.exists():
+                  try:
+                      with open(json_file, 'r', encoding='utf-8') as f:
+                          data = json.load(f)
+                      # Check if it's already in the right format (dict with apiname keys)
+                      if isinstance(data, dict):
+                          return data, 'json'
+                      # If it's a list (like .db format), convert it
+                      elif isinstance(data, list):
+                          converted = {}
+                          for ach in data:
+                              if 'apiname' in ach:
+                                  converted[ach['apiname']] = {
+                                      'earned': ach.get('achieved', 0) == 1,
+                                      'earned_time': ach.get('unlocktime', 0)
+                                  }
+                          return converted, 'json-list'
+                  except Exception as e:
+                      print(f"    Error loading {json_file}: {e}")
+              
+              # Try {appid}.db
+              db_file = folder / f'{appid}.db'
+              if db_file.exists():
+                  try:
+                      with open(db_file, 'r', encoding='utf-8') as f:
+                          data = json.load(f)
+                      # Convert list format to dict format
+                      converted = {}
+                      for ach in data:
+                          if 'apiname' in ach:
+                              converted[ach['apiname']] = {
+                                  'earned': ach.get('achieved', 0) == 1,
+                                  'earned_time': ach.get('unlocktime', 0)
+                              }
+                      return converted, f'{appid}.db'
+                  except Exception as e:
+                      print(f"    Error loading {db_file}: {e}")
+              
+              return None, None
+
           # Determine which AppIDs to process
           if EVENT_NAME == 'push':
               # Only process changed files
@@ -96,16 +143,17 @@ jobs:
               if appids:
                   print(f"Processing {len(appids)} changed game(s): {', '.join(appids)}")
               else:
-                  print("No achievements.json files were changed in this push")
+                  print("No achievements files were changed in this push")
                   exit(0)
           else:
               # Process all AppIDs (scheduled run or manual trigger)
               appids = []
               for folder in appid_dir.iterdir():
                   if folder.is_dir() and folder.name.isdigit():
-                      achievements_file = folder / 'achievements.json'
-                      if achievements_file.exists():
-                          appids.append(folder.name)
+                      # Check for either file type
+                      appid = folder.name
+                      if (folder / 'achievements.json').exists() or (folder / f'{appid}.db').exists():
+                          appids.append(appid)
               print(f"Processing all {len(appids)} games (scheduled/manual run)")
 
           # Load existing game-data.json if it exists
@@ -346,9 +394,14 @@ jobs:
                   json.dump(game_info, f, indent=2, ensure_ascii=False)
 
               # Load achievements data
-              achievements_path = Path(f'AppID/{appid}/achievements.json')
-              with open(achievements_path, 'r', encoding='utf-8') as f:
-                  achievements_data = json.load(f)
+              folder = Path(f'AppID/{appid}')
+              achievements_data, file_type = load_achievements_file(folder)
+              
+              if achievements_data is None:
+                  print(f"  ✗ No achievements file found for {appid}")
+                  continue
+              
+              print(f"  ✓ Loaded achievements from {file_type} format")
               
               # Update existing game data dict
               existing_game_data[appid] = {
@@ -361,38 +414,38 @@ jobs:
           all_game_data = []
           for folder in appid_dir.iterdir():
               if folder.is_dir() and folder.name.isdigit():
-                  achievements_file = folder / 'achievements.json'
-                  if achievements_file.exists():
-                      current_appid = folder.name
-                      
-                      # Use updated data if we just processed it, otherwise use existing
-                      if current_appid in existing_game_data:
-                          all_game_data.append(existing_game_data[current_appid])
-                      else:
-                          # Load from files if not in memory
-                          try:
-                              with open(achievements_file, 'r', encoding='utf-8') as f:
-                                  ach_data = json.load(f)
-                              
-                              game_info_file = folder / 'game-info.json'
-                              if game_info_file.exists():
-                                  with open(game_info_file, 'r', encoding='utf-8') as f:
-                                      info_data = json.load(f)
-                              else:
-                                  info_data = {
-                                      'appid': current_appid,
-                                      'name': f'Game {current_appid}',
-                                      'icon': '',
-                                      'achievements': {}
-                                  }
-                              
-                              all_game_data.append({
+                  current_appid = folder.name
+                  
+                  # Check if achievements file exists
+                  achievements_data, file_type = load_achievements_file(folder)
+                  if achievements_data is None:
+                      continue
+                  
+                  # Use updated data if we just processed it, otherwise use existing
+                  if current_appid in existing_game_data:
+                      all_game_data.append(existing_game_data[current_appid])
+                  else:
+                      # Load from files if not in memory
+                      try:
+                          game_info_file = folder / 'game-info.json'
+                          if game_info_file.exists():
+                              with open(game_info_file, 'r', encoding='utf-8') as f:
+                                  info_data = json.load(f)
+                          else:
+                              info_data = {
                                   'appid': current_appid,
-                                  'info': info_data,
-                                  'achievements': ach_data
-                              })
-                          except Exception as e:
-                              print(f"Error loading data for {current_appid}: {e}")
+                                  'name': f'Game {current_appid}',
+                                  'icon': '',
+                                  'achievements': {}
+                              }
+                          
+                          all_game_data.append({
+                              'appid': current_appid,
+                              'info': info_data,
+                              'achievements': achievements_data
+                          })
+                      except Exception as e:
+                          print(f"Error loading data for {current_appid}: {e}")
 
           # Write complete game-data.json
           with open('game-data.json', 'w', encoding='utf-8') as f:
