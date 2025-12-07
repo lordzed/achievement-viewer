@@ -403,9 +403,12 @@ jobs:
               
               print(f"  ✓ Loaded achievements from {file_type} format")
               
+              # Ensure appid is a string for consistency
+              appid_str = str(appid)
+              
               # Update existing game data dict
-              existing_game_data[appid] = {
-                  'appid': appid,
+              existing_game_data[appid_str] = {
+                  'appid': appid_str,
                   'info': game_info,
                   'achievements': achievements_data
               }
@@ -414,7 +417,7 @@ jobs:
           all_game_data = []
           for folder in appid_dir.iterdir():
               if folder.is_dir() and folder.name.isdigit():
-                  current_appid = folder.name
+                  current_appid = str(folder.name)  # Ensure it's a string
                   
                   # Check if achievements file exists
                   achievements_data, file_type = load_achievements_file(folder)
