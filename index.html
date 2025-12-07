@@ -748,20 +748,40 @@
             const loadingDiv = document.getElementById('loading');
             let loadedCount = 0;
 
-            for (let appId of appIds) {
-                try {
-                    loadingDiv.innerHTML = `
-                        <div class="loading-spinner"></div>
-                        <div>Loading game ${++loadedCount} of ${appIds.length}...</div>
-                    `;
+for (let appId of appIds) {
+    try {
+        loadingDiv.innerHTML = `
+            <div class="loading-spinner"></div>
+            <div>Loading game ${++loadedCount} of ${appIds.length}...</div>
+        `;
 
-                    // Load achievements.json
-                    const achievementsPath = `AppID/${appId}/achievements.json`;
-                    const achResponse = await fetch(achievementsPath);
-                    
-                    if (!achResponse.ok) continue;
+        // Try to load achievements.json first
+        let achievementsPath = `AppID/${appId}/achievements.json`;
+        let achResponse = await fetch(achievementsPath);
+        
+        // If achievements.json doesn't exist, try {appid}.db
+        if (!achResponse.ok) {
+            achievementsPath = `AppID/${appId}/${appId}.db`;
+            achResponse = await fetch(achievementsPath);
+        }
+        
+        if (!achResponse.ok) continue;
 
-                    const achievementsData = await achResponse.json();
+        let achievementsData = await achResponse.json();
+        
+        // If it's an array (from .db file), convert to dict format
+        if (Array.isArray(achievementsData)) {
+            const converted = {};
+            for (const ach of achievementsData) {
+                if (ach.apiname) {
+                    converted[ach.apiname] = {
+                        earned: ach.achieved === 1,
+                        earned_time: ach.unlocktime || 0
+                    };
+                }
+            }
+            achievementsData = converted;
+        }
                     
                     // Try to load game-info.json (created by workflow)
                     let gameInfo = null;
