@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history to detect changes
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -29,6 +31,7 @@ jobs:
       - name: Fetch game data
         env:
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
         run: |
           python - <<'EOF'
           import os
@@ -38,9 +41,11 @@ jobs:
           import time
           import xml.etree.ElementTree as ET
           from bs4 import BeautifulSoup
+          import subprocess
           import re
 
           STEAM_API_KEY = os.environ.get('STEAM_API_KEY', '')
+          EVENT_NAME = os.environ.get('GITHUB_EVENT_NAME', '')
 
           # Top owner Steam IDs
           TOP_OWNER_IDS = [
@@ -54,20 +59,68 @@ jobs:
               76561197995070100, 76561198313790296, 76561198063574735, 76561197996432822,
           ]
 
+          def get_changed_appids():
+              """Get list of AppIDs that were modified in the last push"""
+              try:
+                  # Get changed files from git
+                  result = subprocess.run(
+                      ['git', 'diff', '--name-only', 'HEAD~1', 'HEAD'],
+                      capture_output=True,
+                      text=True,
+                      check=True
+                  )
+                  changed_files = result.stdout.strip().split('\n')
+                  
+                  # Extract AppIDs from changed achievements.json files
+                  changed_appids = set()
+                  for file in changed_files:
+                      # Match pattern: AppID/123456/achievements.json
+                      match = re.match(r'AppID/(\d+)/achievements\.json', file)
+                      if match:
+                          changed_appids.add(match.group(1))
+                  
+                  return list(changed_appids)
+              except Exception as e:
+                  print(f"Error getting changed files: {e}")
+                  return []
+
           appid_dir = Path('AppID')
           if not appid_dir.exists():
               print("No AppID directory found")
               exit(0)
 
-          appids = []
-          for folder in appid_dir.iterdir():
-              if folder.is_dir() and folder.name.isdigit():
-                  achievements_file = folder / 'achievements.json'
-                  if achievements_file.exists():
-                      appids.append(folder.name)
+          # Determine which AppIDs to process
+          if EVENT_NAME == 'push':
+              # Only process changed files
+              appids = get_changed_appids()
+              if appids:
+                  print(f"Processing {len(appids)} changed game(s): {', '.join(appids)}")
+              else:
+                  print("No achievements.json files were changed in this push")
+                  exit(0)
+          else:
+              # Process all AppIDs (scheduled run or manual trigger)
+              appids = []
+              for folder in appid_dir.iterdir():
+                  if folder.is_dir() and folder.name.isdigit():
+                      achievements_file = folder / 'achievements.json'
+                      if achievements_file.exists():
+                          appids.append(folder.name)
+              print(f"Processing all {len(appids)} games (scheduled/manual run)")
 
-          print(f"Found {len(appids)} games with achievements")
-          all_game_data = []
+          # Load existing game-data.json if it exists
+          game_data_path = Path('game-data.json')
+          existing_game_data = {}
+          if game_data_path.exists():
+              try:
+                  with open(game_data_path, 'r', encoding='utf-8') as f:
+                      existing_data = json.load(f)
+                      # Convert to dict for easier lookup
+                      for game in existing_data:
+                          existing_game_data[game['appid']] = game
+                  print(f"Loaded existing data for {len(existing_game_data)} games")
+              except Exception as e:
+                  print(f"Could not load existing game-data.json: {e}")
 
           def scrape_hidden_achievements(appid, steam_id, achievement_names_map):
               """Scrape hidden achievement descriptions from profile page"""
@@ -92,14 +145,12 @@ jobs:
                   
                   for row in achieve_rows:
                       try:
-                          # Get display name
                           name_elem = row.find('h3')
                           if not name_elem:
                               continue
                           
                           display_name = name_elem.text.strip()
                           
-                          # Get description
                           desc_elem = row.find('h5')
                           if not desc_elem:
                               continue
@@ -108,7 +159,6 @@ jobs:
                           if not description:
                               continue
                           
-                          # Match display name to API name using our map
                           api_name = achievement_names_map.get(display_name.lower())
                           
                           if api_name:
@@ -129,6 +179,7 @@ jobs:
                   print(f"    ✗ Error: {e}")
                   return {}
 
+          # Process only the selected AppIDs
           for appid in appids:
               print(f"\nProcessing AppID {appid}...")
               
@@ -190,7 +241,7 @@ jobs:
 
                   # Fetch achievement schema from API
                   hidden_achievements = []
-                  achievement_names_map = {}  # Map display name -> API name
+                  achievement_names_map = {}
                   
                   if STEAM_API_KEY:
                       schema_url = f'https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key={STEAM_API_KEY}&appid={appid}'
@@ -205,7 +256,6 @@ jobs:
                               is_hidden = ach.get('hidden', 0) == 1
                               display_name = ach.get('displayName', ach['name'])
                               
-                              # Build name mapping (lowercase for matching)
                               achievement_names_map[display_name.lower()] = api_name
                               
                               if api_name in achievements_from_xml:
@@ -290,25 +340,65 @@ jobs:
                   import traceback
                   traceback.print_exc()
 
-              # Save files
+              # Save individual game-info.json
               game_info_path = Path(f'AppID/{appid}/game-info.json')
               with open(game_info_path, 'w', encoding='utf-8') as f:
                   json.dump(game_info, f, indent=2, ensure_ascii=False)
 
+              # Load achievements data
               achievements_path = Path(f'AppID/{appid}/achievements.json')
               with open(achievements_path, 'r', encoding='utf-8') as f:
                   achievements_data = json.load(f)
               
-              all_game_data.append({
+              # Update existing game data dict
+              existing_game_data[appid] = {
                   'appid': appid,
                   'info': game_info,
                   'achievements': achievements_data
-              })
+              }
 
+          # Rebuild complete game-data.json from all games in AppID directory
+          all_game_data = []
+          for folder in appid_dir.iterdir():
+              if folder.is_dir() and folder.name.isdigit():
+                  achievements_file = folder / 'achievements.json'
+                  if achievements_file.exists():
+                      current_appid = folder.name
+                      
+                      # Use updated data if we just processed it, otherwise use existing
+                      if current_appid in existing_game_data:
+                          all_game_data.append(existing_game_data[current_appid])
+                      else:
+                          # Load from files if not in memory
+                          try:
+                              with open(achievements_file, 'r', encoding='utf-8') as f:
+                                  ach_data = json.load(f)
+                              
+                              game_info_file = folder / 'game-info.json'
+                              if game_info_file.exists():
+                                  with open(game_info_file, 'r', encoding='utf-8') as f:
+                                      info_data = json.load(f)
+                              else:
+                                  info_data = {
+                                      'appid': current_appid,
+                                      'name': f'Game {current_appid}',
+                                      'icon': '',
+                                      'achievements': {}
+                                  }
+                              
+                              all_game_data.append({
+                                  'appid': current_appid,
+                                  'info': info_data,
+                                  'achievements': ach_data
+                              })
+                          except Exception as e:
+                              print(f"Error loading data for {current_appid}: {e}")
+
+          # Write complete game-data.json
           with open('game-data.json', 'w', encoding='utf-8') as f:
               json.dump(all_game_data, f, indent=2, ensure_ascii=False)
 
-          print(f"\n✓ Processed {len(appids)} games")
+          print(f"\n✓ Updated {len(appids)} game(s), total games in data: {len(all_game_data)}")
           EOF
 
       - name: Commit changes
@@ -316,5 +406,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add AppID/*/game-info.json game-data.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update game data"
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update game data [skip ci]"
           git push
