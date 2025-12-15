@@ -17,7 +17,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/1eda4055bf77c7820f98ebc0ec3440e6e1ef25e5.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/cfc8e8dbc8621116fadc92c655dc7a473ce0dccd.jpg",
       "hidden": false,
-      "percent": "8.1"
+      "percent": "8.0"
     },
     "jp.konami.masterduel.ach.003": {
       "name": "Master of Special Summoning",
@@ -33,7 +33,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/1eda4055bf77c7820f98ebc0ec3440e6e1ef25e5.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/cfc8e8dbc8621116fadc92c655dc7a473ce0dccd.jpg",
       "hidden": false,
-      "percent": "20.3"
+      "percent": "20.4"
     },
     "jp.konami.masterduel.ach.005": {
       "name": "Let's Duel!",
@@ -89,7 +89,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/1eda4055bf77c7820f98ebc0ec3440e6e1ef25e5.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/cfc8e8dbc8621116fadc92c655dc7a473ce0dccd.jpg",
       "hidden": false,
-      "percent": "17.7"
+      "percent": "17.6"
     }
   },
   "uses_db": true
