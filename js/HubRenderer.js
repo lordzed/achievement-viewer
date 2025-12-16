@@ -61,18 +61,28 @@ async function loadGameData(person) {
     // Get blacklist from info if available
     const blacklist = g.info?.blacklist || [];
     
-    // Get all achievement keys
-    const allAchKeys = Object.keys(g.achievements);
+    // DETERMINING THE UNIVERSE OF ACHIEVEMENTS
+    // 1. Try to use the full schema from g.info.achievements (contains locked & unlocked)
+    // 2. Fallback to g.achievements (only contains what's in the save file)
+    const schemaSource = (g.info && g.info.achievements && Object.keys(g.info.achievements).length > 0) 
+                       ? g.info.achievements 
+                       : g.achievements;
+
+    // Get all achievement keys from the source of truth
+    const allAchKeys = Object.keys(schemaSource);
     
     // Filter out blacklisted achievements
     const validAchKeys = allAchKeys.filter(key => !blacklist.includes(key));
     
-    // Count earned achievements (excluding blacklisted)
+    // Count earned achievements
     let earnedCount = 0;
     for (const key of validAchKeys) {
-      const ach = g.achievements[key];
-      // Handle both boolean and numeric earned values
-      if (ach.earned === true || ach.earned === 1) {
+      // Check status in the actual user data (g.achievements)
+      const userAch = g.achievements[key];
+      
+      // We must check if userAch exists because if the save file only stores
+      // unlocked achievements, locked ones won't be in g.achievements at all.
+      if (userAch && (userAch.earned === true || userAch.earned === 1)) {
         earnedCount++;
       }
     }
