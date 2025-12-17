@@ -61,10 +61,8 @@ jobs:
           # Pull latest changes from 'user' branch first
           git pull --rebase origin user || true
           
-          # Add top_owners.json if updated (scheduled run)
-          if [ "${{ github.event_name }}" = "schedule" ]; then
-            git add top_owners.json
-          fi
+          # Add top_owners.json always (to save it if created/updated)
+          git add top_owners.json || true
           
           # Add game data
           git add AppID/*/game-info.json game-data.json
