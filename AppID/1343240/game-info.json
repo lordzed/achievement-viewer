@@ -25,7 +25,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1343240/14fd9b22f8934e286f1222563b124460d5fc5a71.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1343240/969124934e350ef39f7e891b119c85e05defeee2.jpg",
       "hidden": true,
-      "percent": "34.2"
+      "percent": "34.1"
     },
     "ACH_DEFEAT_CORVUS": {
       "name": "Corvus",
@@ -41,7 +41,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1343240/f1d1164f7048d9a303099ffdc8431bcdd3b9726b.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1343240/47126e1d6864eecfeb7ec6e77dfd0380306bc2a0.jpg",
       "hidden": true,
-      "percent": "20.5"
+      "percent": "20.4"
     },
     "ACH_DEFEAT_MAGICIAN_LV2": {
       "name": "Mutated Odur",
@@ -121,7 +121,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1343240/22ab4ac04223d8d4a61d93d720ae2f323e665df4.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1343240/969124934e350ef39f7e891b119c85e05defeee2.jpg",
       "hidden": false,
-      "percent": "45.7"
+      "percent": "45.6"
     },
     "ACH_COMPLETE_LEVEL_GARDEN": {
       "name": "Royal Garden",
@@ -161,7 +161,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1343240/a5a45258ecef4e174d160b512b8b54659aa994de.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1343240/969124934e350ef39f7e891b119c85e05defeee2.jpg",
       "hidden": false,
-      "percent": "92.4"
+      "percent": "92.3"
     },
     "ACH_FIRST_REACH_BEACON": {
       "name": "Take a break",

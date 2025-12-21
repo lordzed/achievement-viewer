@@ -49,7 +49,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/4022d562abd180b43db64961c7b04deaeb1bd63c.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/4531ef4d420d82a667ef996ac04826c85dd9d595.jpg",
       "hidden": false,
-      "percent": "55.7"
+      "percent": "55.8"
     },
     "ACH_KillAndroids1": {
       "name": "What Are These?",
@@ -57,7 +57,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/9b47dc0361ec4e568b2b5603a951f73c84bc109c.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/88bfcce5e5d1ea69345d013c71fb6d49fdadb494.jpg",
       "hidden": false,
-      "percent": "98.8"
+      "percent": "98.9"
     },
     "ACH_KillAndroids500": {
       "name": "Terminate This",
@@ -113,7 +113,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/60467a9819690db9fc0e98f78adba2a45266e6a5.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/fd0635bad48fdcc98f419c00e85b276845776dc1.jpg",
       "hidden": false,
-      "percent": "98.7"
+      "percent": "98.8"
     },
     "ACH_CompleteMission": {
       "name": "Welcome to the Deadzone",
@@ -137,7 +137,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/546ce09b8e3b3bc7693bcbb75d8831d0ffc4fb65.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/ae8cdad5e46d16e66a325693acc4922fbf1e7e98.jpg",
       "hidden": false,
-      "percent": "84.2"
+      "percent": "84.3"
     },
     "ACH_CompleteZone1": {
       "name": "This Bug Hunt Got Complicated",
@@ -193,7 +193,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/242626c3503f965417b96ad585a1c2b1354b0664.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/a2f900c3cdc09bc9ab113caa39fd7f11e84b0189.jpg",
       "hidden": true,
-      "percent": "73.4"
+      "percent": "73.5"
     },
     "ACH_ReadDataLog1": {
       "name": "Looky Here",
@@ -217,7 +217,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/ad666328f4e8fb66ec0c7667c43056063d1aabae.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/242ae0e837e39f954f66ade0588e4e1972cac984.jpg",
       "hidden": false,
-      "percent": "70.6"
+      "percent": "70.7"
     },
     "ACH_TechUpgrades3": {
       "name": "Plot Armor",
@@ -241,7 +241,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/9c11fc24f1746c5fd8dfe6e6e2fe87252589f90b.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/4a5a6fb046f76b41880d2719359531c1aa8d5387.jpg",
       "hidden": false,
-      "percent": "56.2"
+      "percent": "56.3"
     },
     "ACH_SuperUpgrades3": {
       "name": "Maxed Out",
@@ -249,7 +249,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/35e2b99f41c46a1b10ac7b6c25a959ec04390e43.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/7bb5f25b588792cf501bfb4447b6c0a38dd42b89.jpg",
       "hidden": false,
-      "percent": "32.8"
+      "percent": "32.9"
     },
     "ACH_SpendScrap": {
       "name": "Space Wallet",
@@ -257,7 +257,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/886d1c77f46d46b8367a4a702db28dc8801855c9.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/9f08cd191ae4c632f89fbbabf5c78dede0bbc90c.jpg",
       "hidden": false,
-      "percent": "55.2"
+      "percent": "55.3"
     },
     "ACH_CompleteMission_Undamaged": {
       "name": "Invincible",
@@ -321,7 +321,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/98d180502bea83d5263f08b160f1ea56ccd2ab8c.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/a931c44ebdab909ff349b34b8f6c1296b70ecfb9.jpg",
       "hidden": false,
-      "percent": "31.4"
+      "percent": "31.6"
     },
     "ACH_CompleteZone3": {
       "name": "Mental Fortitude",
@@ -337,7 +337,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/2387e2fb449c7e1fa4cb53afc2152c5b1e5e69c0.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/362b94d99cf3171fae4977e9a1fcf338e1f291b9.jpg",
       "hidden": false,
-      "percent": "2.5"
+      "percent": "2.6"
     },
     "ACH_CompleteMission_All_Hard": {
       "name": "Hardcore to the Max",
@@ -361,7 +361,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/8e54482297420cb87d83ada3ee0dcd024cd48366.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/ebec3b9beb5f72d711c3a7c773848c464733da7a.jpg",
       "hidden": false,
-      "percent": "0.3"
+      "percent": "0.4"
     },
     "ACH_ReadAllDataLogs": {
       "name": "Too Long, Didn't Read",
@@ -377,7 +377,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/5a21622d652d363c798de09e42034ce44e7d1d58.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/9c5c821fefd95ef84d997c8792feca503e7ee928.jpg",
       "hidden": true,
-      "percent": "2.9"
+      "percent": "3.0"
     },
     "ACH_ActivateSynergy": {
       "name": "Item Alchemist",
@@ -385,7 +385,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/55c76811156992f88e280948488ec75409622dd2.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/61fcdf5648e43b984261d3bcb668341e77c5c94f.jpg",
       "hidden": false,
-      "percent": "35.4"
+      "percent": "35.6"
     },
     "ACH_ActivateSynergy3": {
       "name": "Feeling the Power",
@@ -393,7 +393,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/270d01b295df4e8004fb4bd3f070d8f022128e37.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/9fa6d69c28df57ef3106de15b360bc56bf2176a3.jpg",
       "hidden": false,
-      "percent": "32.8"
+      "percent": "33.0"
     },
     "ACH_SynergiesActivated": {
       "name": "Promote Synergy",
@@ -409,7 +409,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/9f7f4d4044045b3bc0e9f48854873de29ac86bc1.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3228590/bb49263bb8d0e41d404f33df0b0261ae78b56e9a.jpg",
       "hidden": false,
-      "percent": "36.2"
+      "percent": "36.3"
     },
     "ACH_Sanctify1": {
       "name": "Gunpowder Piety",

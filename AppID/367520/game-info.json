@@ -65,7 +65,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/ef1f6b825646067c63f5703d1c7ba38b52d94259.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/e92b8a9b1382393740a658d9ece0bcad21d0bb03.jpg",
       "hidden": false,
-      "percent": "71.8"
+      "percent": "71.9"
     },
     "DREAM_FK": {
       "name": "Strength",
@@ -81,7 +81,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/341793aae218e6b14c571ee2daf55b87cf11a784.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/80ba52f035a3418b241c62c1eae7c924ec5705e8.jpg",
       "hidden": false,
-      "percent": "63.2"
+      "percent": "63.3"
     },
     "HORNET_2": {
       "name": "Proof of Resolve",
@@ -97,7 +97,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/2d3e4c6217b6d911d8a211f3ab4f3f37e49a584c.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/4f4fedac5e0f99fe9ac8d849296fbe6a202cdb5e.jpg",
       "hidden": false,
-      "percent": "47.2"
+      "percent": "47.3"
     },
     "BROKEN_VESSEL": {
       "name": "Release",
@@ -137,7 +137,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/a39ee369bc9d5dc54d419ad7cae6c1dd346fc632.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/109bb2a566d9a5841d634ac4cf778b0bb5421eb6.jpg",
       "hidden": true,
-      "percent": "31.0"
+      "percent": "31.1"
     },
     "ZOTE": {
       "name": "Rivalry",
@@ -153,7 +153,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/a0864e337fe427586613b09e8799109deccdbcf4.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/8415033a505e66a207bc4c34229154e8c860d73c.jpg",
       "hidden": false,
-      "percent": "38.1"
+      "percent": "38.2"
     },
     "AWAKENING": {
       "name": "Awakening",
@@ -233,7 +233,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/e7205c4c78fefef7894a6731d1a188e992011ec8.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/9204e1e5c4d80aa514583957e57d9ae86ebd0976.jpg",
       "hidden": false,
-      "percent": "33.2"
+      "percent": "33.3"
     },
     "STAG_STATION_HALF": {
       "name": "Connection",
@@ -241,7 +241,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/dad457a73d6612846c24053b76d41a2415ace552.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/6d16598ac798eef2f915b7a9a2619be365c768b5.jpg",
       "hidden": false,
-      "percent": "49.4"
+      "percent": "49.5"
     },
     "STAG_STATION_ALL": {
       "name": "Hope",
@@ -257,7 +257,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/f35cd67af303aa5d609cd1183e9eb29295b302b7.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/5a85ae25f9102058a0ac5bf541d08a510b466764.jpg",
       "hidden": false,
-      "percent": "37.7"
+      "percent": "37.8"
     },
     "WATCHER": {
       "name": "Watcher",
@@ -273,7 +273,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/460d5ab4af6dc0ff8c053c42649fa856949f01b4.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/4fe01dcb8d9665de684eb7f8bda003ebfa938e82.jpg",
       "hidden": false,
-      "percent": "38.8"
+      "percent": "38.9"
     },
     "MAP": {
       "name": "Cartographer",
@@ -281,7 +281,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/7e671e6e88cbe98b9dce57281980fea84a70de9b.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/9db745f7f05c507991e224f2ca73e8d4af36a114.jpg",
       "hidden": false,
-      "percent": "36.4"
+      "percent": "36.5"
     },
     "COLOSSEUM_1": {
       "name": "Warrior",
@@ -433,7 +433,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/8c26d557c3582c7784f338523316f56068e4426d.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/e9699d861ee64eb0b3bfd57f2571896be5db12b4.jpg",
       "hidden": true,
-      "percent": "21.5"
+      "percent": "21.6"
     },
     "GRIMM": {
       "name": "Grand Performance",
@@ -441,7 +441,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/982f6bd69415e06696e2fc414bc595700663ab37.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/367520/549b3980b3a8d04368758d1bd59e007bf31cae1b.jpg",
       "hidden": true,
-      "percent": "26.5"
+      "percent": "26.6"
     },
     "NIGHTMARE_GRIMM": {
       "name": "Ritual",

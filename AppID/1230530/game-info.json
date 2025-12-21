@@ -9,7 +9,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/7214d460bb22769180ff479084820520ec081c44.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/adba15f2ea9cdb34b743fd0e9cb2b2e52090dd5a.jpg",
       "hidden": true,
-      "percent": "77.1"
+      "percent": "77.0"
     },
     "trophy_02_level2_complete": {
       "name": "Find Allies",
@@ -25,7 +25,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/90706fb7980f887e895d1f465134e0d6e3ef8481.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/adba15f2ea9cdb34b743fd0e9cb2b2e52090dd5a.jpg",
       "hidden": true,
-      "percent": "29.5"
+      "percent": "29.4"
     },
     "trophy_04_level4_complete": {
       "name": "Calm before the Storm",
@@ -81,7 +81,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/7a43f771586842d8f3bf25f76eb87e8bf0e794a2.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/adba15f2ea9cdb34b743fd0e9cb2b2e52090dd5a.jpg",
       "hidden": true,
-      "percent": "42.2"
+      "percent": "42.1"
     },
     "trophy_11_all_anvils": {
       "name": "Forgemaster",
@@ -177,7 +177,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/b16d04a5616aba318bded767e060a50827c314c0.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/adba15f2ea9cdb34b743fd0e9cb2b2e52090dd5a.jpg",
       "hidden": false,
-      "percent": "9.7"
+      "percent": "9.8"
     },
     "trophy_23_armor_upgrade_max": {
       "name": "Geared Up",
@@ -185,7 +185,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/35668bdb2ad4bf9bb026729891ebacbe0553ac7f.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/adba15f2ea9cdb34b743fd0e9cb2b2e52090dd5a.jpg",
       "hidden": true,
-      "percent": "36.7"
+      "percent": "36.6"
     },
     "trophy_24_armor_upgrade_all": {
       "name": "All There Is",
@@ -193,7 +193,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/312eda829fa90f2981e1f606b53f4467386a692d.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/adba15f2ea9cdb34b743fd0e9cb2b2e52090dd5a.jpg",
       "hidden": false,
-      "percent": "6.5"
+      "percent": "6.6"
     },
     "trophy_25_armor_dye": {
       "name": "Fashion Victim",
@@ -217,7 +217,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/7b065322409597e2a812a62d03c00ee21d4a7211.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/adba15f2ea9cdb34b743fd0e9cb2b2e52090dd5a.jpg",
       "hidden": false,
-      "percent": "5.9"
+      "percent": "6.0"
     },
     "trophy_28_animal_treasure": {
       "name": "I Found It",
@@ -233,7 +233,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/31561d5e1452a8ec2c55f016012385ce9b8e1165.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/adba15f2ea9cdb34b743fd0e9cb2b2e52090dd5a.jpg",
       "hidden": true,
-      "percent": "3.3"
+      "percent": "3.4"
     },
     "trophy_30_upgrade_stone_max": {
       "name": "Alchemist",
@@ -249,7 +249,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/101daa3a26f8153de81b19f8d14c0b008e1aca33.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/adba15f2ea9cdb34b743fd0e9cb2b2e52090dd5a.jpg",
       "hidden": false,
-      "percent": "33.9"
+      "percent": "33.8"
     },
     "trophy_33_mine_kill_special": {
       "name": "Miner",
@@ -265,7 +265,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/a8c209fcacbb1e5ebdc85d48ce8f930452c15573.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/adba15f2ea9cdb34b743fd0e9cb2b2e52090dd5a.jpg",
       "hidden": true,
-      "percent": "36.5"
+      "percent": "36.4"
     },
     "trophy_35_vanity_items": {
       "name": "Feeling Fancy",
@@ -289,7 +289,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/22640ed313611c4678337e14726c793fc67dde36.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/adba15f2ea9cdb34b743fd0e9cb2b2e52090dd5a.jpg",
       "hidden": true,
-      "percent": "4.5"
+      "percent": "4.6"
     },
     "trophy_39_dlc_watcher_challenge": {
       "name": "Painstaking Persistence",
@@ -297,7 +297,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/f381c1b49eb9c5b9731cfbbe9932d9b58034176a.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/adba15f2ea9cdb34b743fd0e9cb2b2e52090dd5a.jpg",
       "hidden": false,
-      "percent": "20.4"
+      "percent": "20.5"
     },
     "trophy_40_dlc_thelos_questline": {
       "name": "The Forgotten Realm",
@@ -305,7 +305,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/0ef664971b2830689553628cecbfb046a7b26bd5.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1230530/adba15f2ea9cdb34b743fd0e9cb2b2e52090dd5a.jpg",
       "hidden": false,
-      "percent": "7.4"
+      "percent": "7.5"
     }
   },
   "uses_db": false,
