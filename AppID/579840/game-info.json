@@ -41,7 +41,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/579840/95be0d8185b3c8bc28408f11cb62cf78946f1685.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/579840/52e25c74f77e716bcf26b15b9a24bafadb720ce2.jpg",
       "hidden": false,
-      "percent": "50.4"
+      "percent": "50.5"
     },
     "worldmap_reached_cave": {
       "name": "Welcome to the depths!",
@@ -97,7 +97,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/579840/891a975cd51f7a605be67b1b813e4f5f4ac2d651.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/579840/7370a655eba2b984003ff55c168c567740782432.jpg",
       "hidden": false,
-      "percent": "48.9"
+      "percent": "49.0"
     },
     "09_jungle_secret": {
       "name": "Hidden entrance",
@@ -169,7 +169,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/579840/f7b9a00aa3f03d53c189a5899b18fc4e7e32288e.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/579840/b84d2dae8b9f032e010dc6a46094b575a7e86687.jpg",
       "hidden": false,
-      "percent": "23.1"
+      "percent": "23.0"
     },
     "10_mnt_boss": {
       "name": "Damn that bird to hell!",

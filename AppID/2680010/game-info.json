@@ -169,7 +169,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2680010/100db12f344684eef6275fa4f9c6a23cca15c55c.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2680010/8767da4f8b9dbedd396df556ca2919b033c2e489.jpg",
       "hidden": true,
-      "percent": "32.8"
+      "percent": "32.9"
     },
     "Sub_07": {
       "name": "Trial of the Sword",
@@ -201,7 +201,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2680010/86658e989be73c06b2f97db3c182bdc99bec20fd.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2680010/8767da4f8b9dbedd396df556ca2919b033c2e489.jpg",
       "hidden": false,
-      "percent": "93.8"
+      "percent": "93.7"
     },
     "Skill_02": {
       "name": "Pact",
@@ -281,7 +281,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2680010/0f8423275a1dc943a67f01b7fe6e4b29ce8576e4.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2680010/8767da4f8b9dbedd396df556ca2919b033c2e489.jpg",
       "hidden": false,
-      "percent": "43.4"
+      "percent": "43.3"
     },
     "Mission_08": {
       "name": "Resourceful Merchant",
@@ -345,7 +345,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2680010/b82902e94ee1e8faa08c9e5372ec97d5c29d264a.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2680010/8767da4f8b9dbedd396df556ca2919b033c2e489.jpg",
       "hidden": false,
-      "percent": "79.5"
+      "percent": "79.4"
     },
     "Mission_16": {
       "name": "Artisanship",
@@ -369,7 +369,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2680010/b4b25a22310a8e7f225dcc229c64d170ddf1430a.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2680010/8767da4f8b9dbedd396df556ca2919b033c2e489.jpg",
       "hidden": false,
-      "percent": "75.1"
+      "percent": "75.0"
     },
     "Mission_19": {
       "name": "Fully Equipped",
@@ -409,7 +409,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2680010/6a1a1fa7d75d65752f4b690708a730dff247c2f0.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2680010/8767da4f8b9dbedd396df556ca2919b033c2e489.jpg",
       "hidden": true,
-      "percent": "15.2"
+      "percent": "15.3"
     },
     "Complete_04": {
       "name": "Ozma's Past",

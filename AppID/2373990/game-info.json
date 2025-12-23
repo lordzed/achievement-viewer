@@ -9,7 +9,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/5a828c7c5eddacdc94d457a7059bbbea1dab7d75.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/847c0d2174c9ee3cd4ec4d0517c869ea4a091604.jpg",
       "hidden": false,
-      "percent": "70.9"
+      "percent": "70.8"
     },
     "SOLO_ACHIEVEMENT_1_1": {
       "name": "Anomaly Detected",
@@ -17,7 +17,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/6d3313780e90b4df2aea505000fb39a0b8aa77d7.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/e15cf185ef24dadc9e939b7763f6554549c7660a.jpg",
       "hidden": false,
-      "percent": "31.9"
+      "percent": "32.0"
     },
     "SOLO_ACHIEVEMENT_1_2": {
       "name": "Dungeon Break",
@@ -129,7 +129,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/178c998507c87734033cda32e67fa5b496a39e25.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/4f3249a2f205fa7293901b3dfb750ccfd3b91386.jpg",
       "hidden": false,
-      "percent": "30.4"
+      "percent": "30.5"
     },
     "SOLO_ACHIEVEMENT_1_16": {
       "name": "Formidable Presence",
@@ -169,7 +169,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/e087c4d96cb79372ef80da9b86bc0f8d90303b62.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/d444c234282c764082e87ff1afa141c0745534c2.jpg",
       "hidden": false,
-      "percent": "16.2"
+      "percent": "16.3"
     },
     "SOLO_ACHIEVEMENT_1_21": {
       "name": "Fruits of Labor",
@@ -177,7 +177,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/6465b553c0f4c81571e878374822aa35f64f3640.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/bd3e735c48d238fa65fa3419d309994c70eb15b0.jpg",
       "hidden": false,
-      "percent": "47.3"
+      "percent": "47.4"
     },
     "SOLO_ACHIEVEMENT_1_22": {
       "name": "Exceptional Craftsmanship",
@@ -217,7 +217,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/85a968d24362a4bd346d571044af42733616bc78.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/5197606339448bcff042e944de3b57522952a9d4.jpg",
       "hidden": false,
-      "percent": "2.5"
+      "percent": "2.6"
     },
     "SOLO_ACHIEVEMENT_1_27": {
       "name": "Carefree Life",
@@ -249,7 +249,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/3d4c77d9c4db506d8d2482b0811311678b899370.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/b1a5f5925b7a0bc3cc462554c20fcd1d9e16bac0.jpg",
       "hidden": false,
-      "percent": "32.7"
+      "percent": "32.6"
     },
     "SOLO_ACHIEVEMENT_1_31": {
       "name": "Teamwork",
@@ -337,7 +337,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/0b35df232dd2d2a1064657e64dfbe4d48d42acd7.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/b50aff4caafe848aebfb707a9c97dc26e1e6b8b1.jpg",
       "hidden": true,
-      "percent": "10.5"
+      "percent": "10.6"
     },
     "SOLO_ACHIEVEMENT_1_42": {
       "name": "Transformation!",
@@ -369,7 +369,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/55d9736acad9301be7000552723091c909a7cefb.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/b09a9786b8c665abb0a35c6446da819a30fd1345.jpg",
       "hidden": true,
-      "percent": "81.4"
+      "percent": "81.5"
     },
     "SOLO_ACHIEVEMENT_1_47": {
       "name": "Beware of Dog!",
@@ -401,7 +401,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/f31f5b1b09e526866056257c5e7ac2d2e4b5ffe7.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/96e819127ed87b92000e20dbd10e0eecad6349de.jpg",
       "hidden": true,
-      "percent": "36.2"
+      "percent": "36.3"
     },
     "SOLO_ACHIEVEMENT_1_51": {
       "name": "So Nimble!",
@@ -409,7 +409,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/d210bfecf27e2faa7a26c7210e3c779d357c3412.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/8cbe969d5c7d5142a27baefc3a7983863f489259.jpg",
       "hidden": true,
-      "percent": "29.5"
+      "percent": "29.6"
     },
     "SOLO_ACHIEVEMENT_1_52": {
       "name": "Master Undertaker",
