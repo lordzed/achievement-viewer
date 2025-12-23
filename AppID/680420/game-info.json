@@ -65,7 +65,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/3e957704ba570dde304460eb4ec2c0ed30a1ee06.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/0092b3f0e694005fd25123c05062226644e88990.jpg",
       "hidden": true,
-      "percent": "53.6"
+      "percent": "53.5"
     },
     "ach_story_end": {
       "name": "One Last Chance",
@@ -113,7 +113,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/5416e6da7024056619f6a9c4fe518dff20d89f93.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/bea7de2248f28845de6dda88799d8f69e6abafb7.jpg",
       "hidden": false,
-      "percent": "86.0"
+      "percent": "85.9"
     },
     "ach_sidequests_milestone": {
       "name": "Multitasking",
@@ -249,7 +249,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/e6d630785e3cc79fa05d6c0f33cbf3af3ae933f2.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/64f03219febad9f16ca4950e7cb5619b06e4b56d.jpg",
       "hidden": false,
-      "percent": "61.6"
+      "percent": "61.5"
     },
     "ach_crafting_improve": {
       "name": "True Potential",
