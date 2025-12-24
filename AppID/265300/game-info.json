@@ -41,7 +41,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/bd981079f94a495aa70a1ae945d39816d67d40d8.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/f08748969aeba96d601c793571f29014dc34f67f.jpg",
       "hidden": false,
-      "percent": "5.1"
+      "percent": "5.0"
     },
     "ID_ACHIEV_06": {
       "name": "Way of the warrior",
@@ -81,7 +81,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/ea2d841d759d3d0b2ed413ae14af4abb0224cef2.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/984ac4e2636550aeff1fbde1dd29b9e722c18597.jpg",
       "hidden": false,
-      "percent": "33.3"
+      "percent": "33.2"
     },
     "ID_ACHIEV_12": {
       "name": "Not a question of can or can't",
@@ -185,7 +185,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/0b3114c0790683b862a1f681fe5cff821e227695.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/05d8de648d1fd3b88f3d77e9d82a415183768509.jpg",
       "hidden": false,
-      "percent": "20.2"
+      "percent": "20.1"
     },
     "ID_ACHIEV_26": {
       "name": "Give him power",
@@ -201,7 +201,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/78245df9c6e67a729b481253ff199fcd1fba0738.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/ee5f24a226f9fdac63ef653d85782a63555217a1.jpg",
       "hidden": false,
-      "percent": "84.3"
+      "percent": "84.2"
     },
     "ID_ACHIEV_28": {
       "name": "Myself again",
@@ -209,7 +209,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/4b2fea4969db0e00727040ef3af7c92884ea56df.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/92adf7c6194a9540e947faf0ed845460005a5d26.jpg",
       "hidden": false,
-      "percent": "68.8"
+      "percent": "68.7"
     },
     "ID_ACHIEV_29": {
       "name": "Bookworm",
@@ -249,7 +249,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/45319a676c9e0c1eaaff2823cb2e68ccded4137b.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/ed372fa42d7651076a1c3a93969cb0abb5eddfd5.jpg",
       "hidden": false,
-      "percent": "24.2"
+      "percent": "24.1"
     },
     "ID_ACHIEV_34": {
       "name": "Killing monsters",
@@ -297,7 +297,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/9a0e275bd13ffd5690e751cc1fce29580786ab71.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/265300/8cf521054beec89394946585b3b8728cea53c1d7.jpg",
       "hidden": true,
-      "percent": "58.9"
+      "percent": "58.8"
     },
     "ID_ACHIEV_40": {
       "name": "I feel lucky",

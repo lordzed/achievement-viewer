@@ -121,7 +121,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/72946052dfb7db04018e90e43fa239a1f1855e67.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/03158bd6dfa768f111c3666c46b39f77b2d3ca61.jpg",
       "hidden": false,
-      "percent": "18.4"
+      "percent": "18.3"
     },
     "BG3_Quest16": {
       "name": "Jack-of-all-Trades",
@@ -281,7 +281,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/969cc50dcb65bc3993966fba3b732227db209472.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/486641391fb2de3cdfa41598c1e90fc3bf621200.jpg",
       "hidden": false,
-      "percent": "27.8"
+      "percent": "27.7"
     },
     "BG3_Quest36": {
       "name": "No Free Lunches",
@@ -289,7 +289,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/dadbc866606e4b4464fcdbf6684e3f2ec207ad73.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/fc9dba1e459a3b8596ab348856ccd2d7ce1c3ed7.jpg",
       "hidden": true,
-      "percent": "32.4"
+      "percent": "32.3"
     },
     "BG3_Quest37": {
       "name": "Fancy Footwork",
@@ -425,7 +425,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/12f42b79f0e7e7c534f2aafe360a3247f4bd8df4.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d92b5372fbf62e667c33d109edc0a28a6aa12383.jpg",
       "hidden": false,
-      "percent": "6.0"
+      "percent": "5.9"
     },
     "BG3_Quest54": {
       "name": "Foehammer",
