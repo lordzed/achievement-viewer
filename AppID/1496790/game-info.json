@@ -17,7 +17,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/f1c2973d1b52dbaa514801901ee22673140cf933.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/1467ca5b9f49f11938b0fc249645742e17073118.jpg",
       "hidden": true,
-      "percent": "40.3"
+      "percent": "40.2"
     },
     "MYSTERY_03": {
       "name": "Lock and Key",
@@ -25,7 +25,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/c87e11168e6b631f931e300797f5f5d4847a08fd.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/d51e947c294752b981b06970bda67de6c54d5883.jpg",
       "hidden": true,
-      "percent": "36.5"
+      "percent": "36.4"
     },
     "MYSTERY_04": {
       "name": "Bad Apples in Every Orchard",
@@ -49,7 +49,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/e0a2b9e832b3b2f166f4cfa227175f4de7749868.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/1125ceeb545b81211b5d7825a283b8966ad13e70.jpg",
       "hidden": true,
-      "percent": "25.1"
+      "percent": "25.0"
     },
     "FREEZE_1": {
       "name": "To the Victor Go the Spoils",
@@ -57,7 +57,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/8bf6c738b2fa15ad6ebb0132df12ea7d40b588da.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/f2e7d9e456ccc4d53ac7b8804875cdda7abcb0b8.jpg",
       "hidden": true,
-      "percent": "46.2"
+      "percent": "46.1"
     },
     "FREEZE_1_5": {
       "name": "Quartzer Life Crisis",
@@ -89,7 +89,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/605abb96c192916f0c32e3e65b2ddd2f54072b4b.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/b3556e250250bb6bc6de3119edf3a62ceb5f52c0.jpg",
       "hidden": true,
-      "percent": "57.0"
+      "percent": "56.9"
     },
     "HARLEY_3": {
       "name": "Working Hard or Harley Working?",
@@ -113,7 +113,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/0e2e83db12e0fd402ba7b2cd453263d6c15a0b3a.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/ffba0fd048a4af6a6fc47f8c8fc372e82378d5cf.jpg",
       "hidden": true,
-      "percent": "29.8"
+      "percent": "29.7"
     },
     "CLAYFACE_3": {
       "name": "Rock and a Hard Place",
@@ -153,7 +153,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/6e392dd75277b786cf585220a358556d71559a12.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/f4b2622adbc355669d6291a52f30ba21a81554d1.jpg",
       "hidden": false,
-      "percent": "37.0"
+      "percent": "36.9"
     },
     "SECRET_CACHE": {
       "name": "Gotham City Confidential",
@@ -185,7 +185,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/622f515dd6c2a7a3b36690aee595175f762e48dc.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/6183db23159e6f5512392af9a0f61e0acc4e665f.jpg",
       "hidden": true,
-      "percent": "45.9"
+      "percent": "45.8"
     },
     "KNIGHTHOOD_2": {
       "name": "A Worthy Successor",
@@ -201,7 +201,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/cd92047cd9d01efebf2c37c636f478a05f0d1f71.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/e075bcb901920c6bad1bc446173cac853ae23ca6.jpg",
       "hidden": true,
-      "percent": "85.3"
+      "percent": "85.2"
     },
     "HERO_PROGRESSION_2": {
       "name": "He'd Be So Proud of You",
@@ -225,7 +225,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/7c7b287871efa82fffb41b77ec056861963ef836.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/85fdd1aff964214a328068a4153dd71a553a4152.jpg",
       "hidden": false,
-      "percent": "33.9"
+      "percent": "33.8"
     },
     "DEFEAT_OC_1": {
       "name": "Family Meeting",
@@ -233,7 +233,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/c31e245a9cfcc78f655476ce4afaecb02a44fbee.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/5ccb3c5325bd466fd4372a13e54f710a36110179.jpg",
       "hidden": false,
-      "percent": "12.1"
+      "percent": "12.0"
     },
     "DEFEAT_OC_2": {
       "name": "Shock Til They Drop",
@@ -337,7 +337,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/850b055db5d93093e1aa783ee646a43db1fa0f46.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/7c656a681cda8976bfb67eb727bbb16113312ca9.jpg",
       "hidden": true,
-      "percent": "25.2"
+      "percent": "25.1"
     },
     "CHALLENGES_1": {
       "name": "Protector of Gotham",
@@ -345,7 +345,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/5b5aac6ed0bae339c0d5ad10355091a9b2bbb1dc.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1496790/3fbd4b966dce50cecb34fc7afecb1d879d012140.jpg",
       "hidden": false,
-      "percent": "28.0"
+      "percent": "27.9"
     },
     "CRAFTING_MOD_CHIPS": {
       "name": "Fusion Expert",

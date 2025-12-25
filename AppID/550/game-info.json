@@ -177,7 +177,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/6d61190a5e1d19c8dee6357477cd30aea8bd3605.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/518dbce4fed3b4dd422fad3bae8b3cdc137d4de3.jpg",
       "hidden": false,
-      "percent": "18.4"
+      "percent": "18.3"
     },
     "ACH_KILL_TANK_MELEE_ONLY": {
       "name": "TANK BURGER",
@@ -249,7 +249,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/02d01200d3f14ba7a1145366397ff124c1a45464.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/7dfc0811aae1efb9271fb9de7314b53dcf0064c7.jpg",
       "hidden": false,
-      "percent": "6.3"
+      "percent": "6.2"
     },
     "ACH_WITCH_TOWN_NO_WITCH_KILLS": {
       "name": "SOB STORY",
@@ -297,7 +297,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/93aa9619d54a32b082f90d64c1449673beca86bd.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/77a1d314937d5dab636ca619943d80b94c694885.jpg",
       "hidden": false,
-      "percent": "18.4"
+      "percent": "18.3"
     },
     "ACH_VS_SPIT_ON_SMOKERED_PLAYER": {
       "name": "A SPITTLE HELP FROM MY FRIENDS",
@@ -305,7 +305,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/c96663305f7b46e402faf2d61895a65602f9c07b.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/d39e951ece9d695b3607957b204d153fa933fb36.jpg",
       "hidden": false,
-      "percent": "10.1"
+      "percent": "10.0"
     },
     "ACH_VS_BOWL_ENEMY_TEAM": {
       "name": "SCATTERING RAM",
@@ -809,7 +809,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/81522571f3f42048be3e9985a05f7206f7d35e5e.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/4f56a3e9550c8097c51fa3e55daa4628bbb79a2d.jpg",
       "hidden": false,
-      "percent": "67.5"
+      "percent": "67.6"
     }
   },
   "uses_db": true,

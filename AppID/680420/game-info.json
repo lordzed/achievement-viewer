@@ -65,7 +65,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/3e957704ba570dde304460eb4ec2c0ed30a1ee06.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/0092b3f0e694005fd25123c05062226644e88990.jpg",
       "hidden": true,
-      "percent": "53.6"
+      "percent": "53.5"
     },
     "ach_story_end": {
       "name": "One Last Chance",
@@ -113,7 +113,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/5416e6da7024056619f6a9c4fe518dff20d89f93.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/bea7de2248f28845de6dda88799d8f69e6abafb7.jpg",
       "hidden": false,
-      "percent": "86.0"
+      "percent": "85.9"
     },
     "ach_sidequests_milestone": {
       "name": "Multitasking",
@@ -137,7 +137,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/e6fc8de18c9c37b0122583918ed9595a12015e41.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/7f96f026a6247a1770a2b19ad2ca1027be8389f8.jpg",
       "hidden": false,
-      "percent": "54.6"
+      "percent": "54.5"
     },
     "ach_kills_2": {
       "name": "Gravedigger's BFF",
@@ -169,7 +169,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/701cf6997ea9e3b5db01b4e16c6be3d78d9bc53a.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/2e66a528810b39bd77dc323a8a4af4016e31b8b8.jpg",
       "hidden": false,
-      "percent": "61.6"
+      "percent": "61.5"
     },
     "ach_miniboss_status_kill": {
       "name": "Clash of the Altered",
@@ -185,7 +185,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/360e0ce62d1ff665aa248692b14827e8089d314a.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/71634d3dcef9863cc7a292ff7a37d72ae8258855.jpg",
       "hidden": false,
-      "percent": "35.9"
+      "percent": "35.8"
     },
     "ach_enhanced_skill": {
       "name": "Ace in the Hole",
@@ -225,7 +225,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/5c024a1236fa8c69762b08c3b25b6259cd5fc166.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/5354a2ee635ee5931e507e2206f28e0ca4e63a79.jpg",
       "hidden": false,
-      "percent": "89.6"
+      "percent": "89.5"
     },
     "ach_class_tree_branch": {
       "name": "Surpassing the Tempest",
@@ -249,7 +249,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/e6d630785e3cc79fa05d6c0f33cbf3af3ae933f2.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/64f03219febad9f16ca4950e7cb5619b06e4b56d.jpg",
       "hidden": false,
-      "percent": "61.6"
+      "percent": "61.5"
     },
     "ach_crafting_improve": {
       "name": "True Potential",
@@ -305,7 +305,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/e5e47bae148cb1b96c6db6eb61bbede09d9c633b.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680420/b299b19e97d99a3c5d18da42431a7bfa86f049ed.jpg",
       "hidden": false,
-      "percent": "66.1"
+      "percent": "66.0"
     },
     "ach_collectibles_2": {
       "name": "One for the Books",

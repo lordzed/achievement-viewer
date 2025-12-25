@@ -65,7 +65,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2113900/ede9f5f784043fa7af6af75c1abfe27551e4d420.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2113900/3a971991c515487a72762aa151afbab71534457c.jpg",
       "hidden": false,
-      "percent": "4.0"
+      "percent": "3.9"
     },
     "WIN_FREEROAM_RACE": {
       "name": "Street Racer",
@@ -73,7 +73,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2113900/1af521c86ae98dff09cbe462e63da3a9834e2819.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2113900/0b2489811a3a98c507f9a52e628e1ffa1774bfd6.jpg",
       "hidden": false,
-      "percent": "16.7"
+      "percent": "16.6"
     },
     "WHERE_ARE_YOU_GOING": {
       "name": "Where are you going?",
@@ -81,7 +81,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2113900/1af521c86ae98dff09cbe462e63da3a9834e2819.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2113900/0b2489811a3a98c507f9a52e628e1ffa1774bfd6.jpg",
       "hidden": false,
-      "percent": "7.9"
+      "percent": "7.8"
     },
     "AROUND_THE_WORLD": {
       "name": "Around the world",
@@ -137,7 +137,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2113900/1af521c86ae98dff09cbe462e63da3a9834e2819.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2113900/0b2489811a3a98c507f9a52e628e1ffa1774bfd6.jpg",
       "hidden": false,
-      "percent": "6.1"
+      "percent": "6.2"
     },
     "TOFU_DELIVERY_100": {
       "name": " Unspilled Cup",
@@ -169,7 +169,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2113900/3efaa8c12e0d3fe80c0fe5e571e523a5fbe6f330.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2113900/5818af4ef0d01e6ff6685b3b10d81afd589dd8d7.jpg",
       "hidden": true,
-      "percent": "71.6"
+      "percent": "71.7"
     }
   },
   "uses_db": false,
