@@ -1,5 +1,5 @@
 {
-  "ALG-GalacticGod": { "earned": false, "earned_time": 0 },
+  "ALG-GalacticGod": { "earned": true, "earned_time": 1765886400 },
   "ALG-Photographer": { "earned": false, "earned_time": 0 },
   "ALG-Architect": { "earned": false, "earned_time": 0 },
   "ALG-AutomotiveEngineer": { "earned": false, "earned_time": 0 },
@@ -56,7 +56,7 @@
   "CvG-RollingThunder": { "earned": true, "earned_time": 1765886160 },
   "CVG-GhettoBlaster": { "earned": false, "earned_time": 0 },
 
-  "ALG-UnlockSpace": { "earned": true, "earned_time": 1765886400 },
+  "ALG-UnlockSpace": { "earned": true, "earned_time": 1765886330 },
   "SPG-SuperPilot": { "earned": false, "earned_time": 0 },
   "SPG-Engineer": { "earned": false, "earned_time": 0 },
   "SPG-Conquistador": { "earned": false, "earned_time": 0 },
@@ -83,7 +83,6 @@
   "Wanderer Passion": { "earned": true, "earned_time": 1766257800 },
   "Trader Passion": { "earned": false, "earned_time": 0 },
   "Shaman Passion": { "earned": true, "earned_time": 1765886460 },
-
   "SPG-SplitPersonality": { "earned": false, "earned_time": 0 },
 
   "ADV-Published Author": { "earned": false, "earned_time": 0 },
