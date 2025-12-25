@@ -33,7 +33,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/40fe8b285b5a29fd14004a02239e9f7c4cbd30d1.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/65266b65ae3df4373862c07b4785f6574191514b.jpg",
       "hidden": false,
-      "percent": "53.8"
+      "percent": "53.7"
     },
     "enterGinsoTree": {
       "name": "Rotten Inside",
@@ -57,7 +57,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/c45b2db48d11c5588927cc96d1cc063b6217577d.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/5a1c98fcb2cbc97d3eea841ae865b36cf9fd4f0c.jpg",
       "hidden": false,
-      "percent": "49.2"
+      "percent": "49.1"
     },
     "clearMistyWoods": {
       "name": "Obtaining Clarity",
@@ -81,7 +81,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/a55dd8be490da31ef106021dd513f4e95be84a9c.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/52ba54f787f1c98cf9ca5b3b1ba83b1c4cae7572.jpg",
       "hidden": false,
-      "percent": "38.6"
+      "percent": "38.5"
     },
     "recoverSunstone": {
       "name": "Top of the world",
@@ -201,7 +201,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/4bbf264374afc58e9198cb8a2f82ab3e908acb37.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/f7b397a6e8ca35b1b94922ab03382e7f054d3f61.jpg",
       "hidden": false,
-      "percent": "76.3"
+      "percent": "76.2"
     },
     "findHalfOfMapStones": {
       "name": "Halfway There",
@@ -241,7 +241,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/7c4840f16420280a5678ebc99ca4669fb7974579.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/e9026a07b1fe7b00a20e30b4e119c1deb493b0ff.jpg",
       "hidden": false,
-      "percent": "11.8"
+      "percent": "11.7"
     },
     "collectLotsOfEnergy": {
       "name": "Power Player",
@@ -297,7 +297,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/9862bc7fcb6bdbab93c3018f0fbf5a6ab8d7a136.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/589ae8050437f1118df599f1f2bc8747d47126a1.jpg",
       "hidden": false,
-      "percent": "18.1"
+      "percent": "18.0"
     },
     "juggleRock": {
       "name": "Juggle Master",
@@ -369,7 +369,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/277a00cb5de386c8876b20eb5bf7329371ec8a32.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/efbc5605e904e5fcea5cfdeaa28ba9c90ef6803e.jpg",
       "hidden": false,
-      "percent": "30.8"
+      "percent": "30.7"
     },
     "finishWholeGameFast": {
       "name": "Supersonic ",
@@ -385,7 +385,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/7971558da340c480f7ff1ee42a5aaaa27ed30cb6.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/0c483b38fcac28e6e8a31a9fd87a83f32fabc849.jpg",
       "hidden": false,
-      "percent": "30.5"
+      "percent": "30.4"
     },
     "completeGameWithoutDying": {
       "name": "Immortal",

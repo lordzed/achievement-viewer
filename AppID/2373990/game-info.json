@@ -33,7 +33,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/ce39043e858a264328a998958d16b5ce3915c46d.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/0b454c7ac3594c8c06d95361c63703410a2df321.jpg",
       "hidden": false,
-      "percent": "43.7"
+      "percent": "43.8"
     },
     "SOLO_ACHIEVEMENT_1_4": {
       "name": "The Death Knight",
@@ -145,7 +145,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/99775bb06be73773093b09af1f2910de173a5205.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/eb12b1715d954c766944ec06fce1f04c2fa4ecd3.jpg",
       "hidden": false,
-      "percent": "93.7"
+      "percent": "93.8"
     },
     "SOLO_ACHIEVEMENT_1_18": {
       "name": "Relic Collector",
@@ -177,7 +177,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/6465b553c0f4c81571e878374822aa35f64f3640.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/bd3e735c48d238fa65fa3419d309994c70eb15b0.jpg",
       "hidden": false,
-      "percent": "47.2"
+      "percent": "47.3"
     },
     "SOLO_ACHIEVEMENT_1_22": {
       "name": "Exceptional Craftsmanship",
@@ -313,7 +313,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/9fa8fb82b1b75821020708f0873af16a7ec85486.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/df194ba3b5e39d7e180a8f53aa5e7cbddc1a17ae.jpg",
       "hidden": true,
-      "percent": "14.1"
+      "percent": "14.2"
     },
     "SOLO_ACHIEVEMENT_1_39": {
       "name": "High Five!",
@@ -361,7 +361,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/b9c1c6ce468db4287f420c5516ba38dfaa3d5592.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/6a4cb61e0c7cf9cf81a8f5a312b81b6a36b86ded.jpg",
       "hidden": true,
-      "percent": "91.9"
+      "percent": "92.0"
     },
     "SOLO_ACHIEVEMENT_1_46": {
       "name": "Punishment for the Cowardly",
@@ -377,7 +377,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/35fd02a8e0ede5fe9daa8aa40bc217014a46ac17.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/03166d1c63052d9e29f6996d947f08d8c5537076.jpg",
       "hidden": true,
-      "percent": "65.6"
+      "percent": "65.7"
     },
     "SOLO_ACHIEVEMENT_1_48": {
       "name": "Vanished!",
@@ -393,7 +393,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/98d054fb970bc7b1c2177bcaeb4140d7241e17f1.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/3ba5e62b472bf749d411398d5a546934e5d5057a.jpg",
       "hidden": true,
-      "percent": "43.7"
+      "percent": "43.8"
     },
     "SOLO_ACHIEVEMENT_1_50": {
       "name": "Sword Over Snow",
@@ -425,7 +425,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/ff95021af8eab30de82dcdf6d840bea49580f9cc.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/7d053fe17f86ea3f00cc67eaa760c4e2926280af.jpg",
       "hidden": true,
-      "percent": "20.0"
+      "percent": "20.1"
     },
     "SOLO_ACHIEVEMENT_1_54": {
       "name": "Dominate Hell!",
@@ -433,7 +433,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/35e25c35bbdd509e15dd2fba3bc5e855d13955d8.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/80ede7cd49481d8ec478b838de06c8149bb686f5.jpg",
       "hidden": true,
-      "percent": "15.9"
+      "percent": "16.0"
     },
     "SOLO_ACHIEVEMENT_1_55": {
       "name": "Thou Shall Worship God",
@@ -441,7 +441,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/8b4c09996590119425365505b7ee717a729a534b.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2373990/cabb5b6e45db314841a09b513626f988fb1991cf.jpg",
       "hidden": true,
-      "percent": "95.5"
+      "percent": "95.6"
     },
     "SOLO_ACHIEVEMENT_1_56": {
       "name": "Another Chance",

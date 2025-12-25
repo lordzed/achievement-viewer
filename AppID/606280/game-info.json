@@ -81,7 +81,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/1265bd547215465dc920c7223509964191cdea68.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/44a3f2f9e90a7de7c8818b2f7c28a96b93689915.jpg",
       "hidden": true,
-      "percent": "43.9"
+      "percent": "44.0"
     },
     "Collect_Hollow_Stasis": {
       "name": "Freeze Frame",
@@ -129,7 +129,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/70f22df017534ed3807e01af25f5760bd6a502a7.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/a8ea97164b7545f53f7f59788baf03444279bfe6.jpg",
       "hidden": true,
-      "percent": "70.6"
+      "percent": "70.7"
     },
     "Save_Humans_5": {
       "name": "Five's a Crowd",
@@ -217,7 +217,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/746b5d06e835d875b42916f04dbdcea12c0438e1.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/343bf48c3f6644d3fa7172138cf3add1611cbacc.jpg",
       "hidden": false,
-      "percent": "24.8"
+      "percent": "24.9"
     },
     "Game_CompleteApocolyptic": {
       "name": "Death Incarnate",
@@ -249,7 +249,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/5e3d59a4466644ff886d18851ba8bfd106b7bd48.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/04f148b33fca631fd543369180d2d2778e09bb33.jpg",
       "hidden": true,
-      "percent": "49.5"
+      "percent": "49.6"
     },
     "Spend_AttributePoint_1": {
       "name": "First of many…",
@@ -289,7 +289,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/f759f70d6b1fb32bfc41ec125b58226c74e479a7.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/8996b3e958d5d540b7c06af44c5faef630489f80.jpg",
       "hidden": true,
-      "percent": "31.5"
+      "percent": "31.6"
     },
     "Collect_HealthStone_HealUpgrade_1": {
       "name": "Increased Vigor",
@@ -321,7 +321,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/48ea176f6369edd2c7264acbebff284121ea3c5d.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/687b9673821a8998b4d68d8f8efa58f9df69f6b8.jpg",
       "hidden": true,
-      "percent": "45.1"
+      "percent": "45.2"
     },
     "Collect_AdamantineMedium_30": {
       "name": "Unyielding Strength",
@@ -377,7 +377,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/0993a076b95303403b5a89de2b2d1f8070e98c25.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/606280/77f2a050b0563e77fa989317716487080b4b865d.jpg",
       "hidden": true,
-      "percent": "37.8"
+      "percent": "37.9"
     },
     "Kill_Demon_Kraken": {
       "name": "Love Tap",

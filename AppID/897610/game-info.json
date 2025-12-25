@@ -25,7 +25,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/897610/582b5c6f4d6139170ddafea1e14de9bcd973a3bd.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/897610/ebbc37319e94d59f1a3b15ecd7e11bbb85a69de7.jpg",
       "hidden": true,
-      "percent": "37.6"
+      "percent": "37.7"
     },
     "4": {
       "name": "R.I.P.ed apart",
@@ -41,7 +41,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/897610/b8b9240cba06bafd23c5ef76e3adffec4c5fd342.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/897610/0274a7aadd829c599efa700013eb21ffd240c640.jpg",
       "hidden": true,
-      "percent": "29.6"
+      "percent": "29.7"
     },
     "6": {
       "name": "Elementary, dear Sputnick",
@@ -81,7 +81,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/897610/538463872c9864e39da99de1677ba905aff4002d.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/897610/f0af2413403818df89da94675c88a8472e9c9ed3.jpg",
       "hidden": false,
-      "percent": "17.1"
+      "percent": "17.2"
     },
     "11": {
       "name": "The Boss",
@@ -89,7 +89,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/897610/fb7159fb7d634e6fba37ba148949e049e3dd58df.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/897610/f411f65d34e5f59dbd5f9ffb240150a405f1d94b.jpg",
       "hidden": false,
-      "percent": "13.4"
+      "percent": "13.5"
     },
     "12": {
       "name": "What privacy?",
@@ -97,7 +97,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/897610/fb08fc1d6d3190a7e2855937d04881b8d86e3d1d.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/897610/41aed12d8bddb0991ec15f0ecb617d6ab78d5700.jpg",
       "hidden": false,
-      "percent": "5.1"
+      "percent": "5.2"
     },
     "13": {
       "name": "Gear Legend",
@@ -105,7 +105,7 @@
       "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/897610/b400395c36b7d43b853e42c24422162952e0911c.jpg",
       "icongray": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/897610/0ffbf3677548b82aa633adc6b266a43625d6d3ee.jpg",
       "hidden": false,
-      "percent": "15.9"
+      "percent": "16.0"
     }
   },
   "uses_db": false,
