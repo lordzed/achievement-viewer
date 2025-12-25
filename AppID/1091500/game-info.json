@@ -97,7 +97,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1091500/a3acd634e21dea672bb35c0d6a9707ff5079aed1.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1091500/961e51e8bd9e1ec292687055b6d1a4486b0e124d.jpg",
       "hidden": false,
-      "percent": "42.6"
+      "percent": "42.5"
     },
     "ThisIsPacifica": {
       "name": "Greetings from Pacifica!",
@@ -193,7 +193,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1091500/997859e0c89dda10f11a091a566999e68e6f9ce3.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1091500/35a05a2c50d604f54724d65b7fdf6f9ee71fe88c.jpg",
       "hidden": false,
-      "percent": "42.0"
+      "percent": "41.9"
     },
     "QueenOfTheHighway": {
       "name": "Life of the Road",
@@ -329,7 +329,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1091500/8f5eacf50eb2ad11fe9dbd1d3a98c306d54ff545.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1091500/961e51e8bd9e1ec292687055b6d1a4486b0e124d.jpg",
       "hidden": true,
-      "percent": "46.3"
+      "percent": "46.2"
     },
     "TradeUnion": {
       "name": "The Jungle",
@@ -345,7 +345,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1091500/25bab7e2288262ad801664e62f241e2839edb457.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1091500/961e51e8bd9e1ec292687055b6d1a4486b0e124d.jpg",
       "hidden": true,
-      "percent": "68.4"
+      "percent": "68.3"
     },
     "MaxPain": {
       "name": "The Quick and the Dead",
@@ -441,7 +441,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1091500/714db842d4bbf426994d8cc7450769e75c47da8b.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1091500/961e51e8bd9e1ec292687055b6d1a4486b0e124d.jpg",
       "hidden": false,
-      "percent": "32.1"
+      "percent": "32.0"
     },
     "TwoHeadsOneBullet": {
       "name": "Two Heads, One Bullet",
@@ -449,7 +449,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1091500/26d6c25c2ca7e5877b26347fc05f5eb2dd504bbf.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1091500/35a05a2c50d604f54724d65b7fdf6f9ee71fe88c.jpg",
       "hidden": false,
-      "percent": "27.8"
+      "percent": "27.7"
     },
     "VForVendetta": {
       "name": "V for Vendetta",

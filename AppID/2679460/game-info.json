@@ -25,7 +25,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/2ee2c86151d536ba862e36be43f27f15fea2a984.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/814657718dd6b5930f52f7cfacc4696fbe2a80cb.jpg",
       "hidden": false,
-      "percent": "65.6"
+      "percent": "65.5"
     },
     "ACHIEVEMENT_14": {
       "name": "Archetype Hero",
@@ -49,7 +49,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/1b386b3109289066515d81e7cf97d840900c5590.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/814657718dd6b5930f52f7cfacc4696fbe2a80cb.jpg",
       "hidden": false,
-      "percent": "68.9"
+      "percent": "68.8"
     },
     "ACHIEVEMENT_44": {
       "name": "Bookworm",
@@ -129,7 +129,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/d7ef23530dd8345f33b16db8e40dbfb146c4c064.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/814657718dd6b5930f52f7cfacc4696fbe2a80cb.jpg",
       "hidden": false,
-      "percent": "51.4"
+      "percent": "51.3"
     },
     "ACHIEVEMENT_35": {
       "name": "Globetrotter",
@@ -137,7 +137,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/8dbc9889d987cccba8c39ad4f88d348d77893ca6.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/814657718dd6b5930f52f7cfacc4696fbe2a80cb.jpg",
       "hidden": false,
-      "percent": "40.5"
+      "percent": "40.4"
     },
     "ACHIEVEMENT_29": {
       "name": "Hearts as One",
@@ -161,7 +161,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/616af080921b9372d012684b0ae8d5ba457b1b94.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/814657718dd6b5930f52f7cfacc4696fbe2a80cb.jpg",
       "hidden": false,
-      "percent": "23.9"
+      "percent": "23.8"
     },
     "ACHIEVEMENT_15": {
       "name": "His Majesty",
@@ -177,7 +177,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/ab85c40ad1fbe7ba091116e4f5ef4dbf4f3cdbf2.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/814657718dd6b5930f52f7cfacc4696fbe2a80cb.jpg",
       "hidden": true,
-      "percent": "50.9"
+      "percent": "50.8"
     },
     "ACHIEVEMENT_30": {
       "name": "King of Cuisine",
@@ -193,7 +193,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/e96a7ec5b34777dc9ebeea1eadb9c28eace61c52.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/814657718dd6b5930f52f7cfacc4696fbe2a80cb.jpg",
       "hidden": true,
-      "percent": "48.5"
+      "percent": "48.4"
     },
     "ACHIEVEMENT_23": {
       "name": "Money is Power",
@@ -209,7 +209,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/96cef734bb069f02584998f4a188c2e5bdaaa736.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/814657718dd6b5930f52f7cfacc4696fbe2a80cb.jpg",
       "hidden": false,
-      "percent": "67.0"
+      "percent": "66.9"
     },
     "ACHIEVEMENT_25": {
       "name": "No Mercy",
@@ -313,7 +313,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/828bae60cdd03abb818d9f003f28d092fda7794b.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/814657718dd6b5930f52f7cfacc4696fbe2a80cb.jpg",
       "hidden": false,
-      "percent": "28.7"
+      "percent": "28.6"
     },
     "ACHIEVEMENT_1": {
       "name": "The Traveller",
@@ -337,7 +337,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/04f6e7dba05c687aaf4e3c81910f687f6a0dbd7d.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/2679460/814657718dd6b5930f52f7cfacc4696fbe2a80cb.jpg",
       "hidden": false,
-      "percent": "37.7"
+      "percent": "37.6"
     },
     "ACHIEVEMENT_22": {
       "name": "What's Yours is Mine",

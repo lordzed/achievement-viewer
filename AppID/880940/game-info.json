@@ -17,7 +17,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/17992ea01b0940328c96f8294eb3fa8b90b12ebf.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/1ba8720b023f06fc6bd5501c50c0c0eb08d96063.jpg",
       "hidden": false,
-      "percent": "10.9"
+      "percent": "10.8"
     },
     "ACH_SPEEDY_SABERS": {
       "name": "Chopped To Bits",
@@ -25,7 +25,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/bae2fef0740f2c66fedc0991732ee6d45b9c00c7.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/86e4292138b8c3fae71f6f1a0c4a50ab5687eb4e.jpg",
       "hidden": false,
-      "percent": "45.8"
+      "percent": "45.7"
     },
     "ACH_BULLET_BARRAGE": {
       "name": "Dodge This",
@@ -65,7 +65,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/40b534b1d4b6858c8c0a1c6b34a1f953e59ed0d1.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/111b345878ababec379e3a797302059441384f61.jpg",
       "hidden": false,
-      "percent": "14.4"
+      "percent": "14.3"
     },
     "ACH_FIRST_GAME": {
       "name": "Goodluck!",
@@ -81,7 +81,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/a86cfe5805fcca647106aa5e1681e9e769aa6aa8.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/29abcaf9cac17098b921f7ea3f461dc1612ec1e7.jpg",
       "hidden": false,
-      "percent": "45.2"
+      "percent": "45.1"
     },
     "ACH_SLIPPERY_SPRINT": {
       "name": "Light Foot",
@@ -137,7 +137,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/e261d36f84e95780653d818779539d5afbe1e8c4.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/05b43f95eaac5c1464595c193ccd9cb0536cc8b0.jpg",
       "hidden": false,
-      "percent": "32.2"
+      "percent": "32.1"
     },
     "ACH_RUSTY_RACERS": {
       "name": "Road Warrior",
@@ -153,7 +153,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/e0bdcc7be113e1b1166199a4fab251047fad2948.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/27ef63a23b7c0d42dd5ded91faa9868b8cbf710d.jpg",
       "hidden": false,
-      "percent": "19.8"
+      "percent": "19.7"
     },
     "ACH_EXPLOSIVE_EXCHANGE": {
       "name": "Seeing Stars",
@@ -169,7 +169,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/26b7495d45ac68fa55b3e9d111d130bbb087b36b.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/63ba1ade1809a1f5560ca3d94721a81881741da8.jpg",
       "hidden": false,
-      "percent": "84.8"
+      "percent": "84.9"
     },
     "ACH_TUNNELING_TANKS": {
       "name": "Starman",
@@ -185,7 +185,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/1dab624861f59c30f02c2e14e0211ec2ce0dcfd9.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/ea2c11750976338670a3975f637d7df7d3d707db.jpg",
       "hidden": false,
-      "percent": "56.8"
+      "percent": "56.9"
     },
     "ACH_WIN_FIRST_MINIGAME": {
       "name": "The First of Many!",
@@ -209,7 +209,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/8520db98677d40fb4ec85a443addf320751cbb90.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/8c3f27aa2db118a795f4f2102547d1c316999034.jpg",
       "hidden": false,
-      "percent": "23.8"
+      "percent": "23.7"
     },
     "ACH_TEMPORAL_TRAILS": {
       "name": "Too Slow",
@@ -249,7 +249,7 @@
       "icon": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/d80de9dbe5d276a5113af04f8fe4a53ddd25952c.jpg",
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/880940/67ac2db51e88e08633e3d0a15f00bfa7ece3be11.jpg",
       "hidden": false,
-      "percent": "63.9"
+      "percent": "63.8"
     }
   },
   "uses_db": false,
