@@ -436,6 +436,21 @@ for appid in appids:
                 break
             time.sleep(2)
 
+    # Fetch percentages
+    percent_url = f"https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid={appid}"
+    percent_response = requests.get(percent_url, timeout=10)
+
+    if percent_response.ok:
+        percent_data = percent_response.json()
+        percentages = percent_data.get("achievementpercentages", {}).get("achievements", [])
+
+        for ach_percent in percentages:
+            ach_name = ach_percent.get("name")
+            if ach_name in game_info["achievements"]:
+                game_info["achievements"][ach_name]["percent"] = (ach_percent.get("percent", 0))
+
+        print(f"  ✓ Got percentages")
+
     # Save missing hidden achievements file
     missing_file_path = base_path / "missing hidden achievements"
     still_missing_api_names = [
