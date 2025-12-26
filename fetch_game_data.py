@@ -373,14 +373,13 @@ appids = get_changed_appids()
 if appids:
     # Found specific changes - process only those
     print(f"Processing {len(appids)} changed game(s): {', '.join(appids)}")
-elif EVENT_NAME == "schedule":
-    # Scheduled run - process all games
+elif EVENT_NAME in ("schedule", "workflow_dispatch"):
+    # Scheduled run OR manual trigger - process all games
     appids = [f.name for f in appid_dir.iterdir() if f.is_dir() and f.name.isdigit()]
-    print(f"Processing all {len(appids)} games (scheduled run)")
+    print(f"Processing all {len(appids)} games ({'scheduled' if EVENT_NAME == 'schedule' else 'manual'} run)")
 else:
-    # No changes detected, but triggered manually or by workflow_dispatch
-    print("No game-specific changes detected.")
-    print("To process all games, use the scheduled run or trigger manually from the Actions tab.")
+    # No changes detected and not a scheduled/manual run
+    print("No game-specific changes detected. Exiting.")
     exit(0)
 
 # --- Load existing game-data.json --- #
