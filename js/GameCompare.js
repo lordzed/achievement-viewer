@@ -36,19 +36,11 @@ function getPageOwner() {
  * Detects if the person browsing IS the person who owns the page.
  */
 export function isOwnProfile() {
-    // 1. Who owns the page? (The Host)
     const pageOwner = getPageOwner();
-    
-    // 2. Who is the visitor? (The Guest)
     const visitor = getStoredUsername();
     
-    // 3. If visitor is unknown, return FALSE.
-    // This ensures the "Compare" button appears so you can identify yourself.
-    if (!visitor) {
-        return false; 
-    }
+    if (!visitor) return false; 
     
-    // 4. Compare: Are you looking at your own mirror reflection?
     return visitor.toLowerCase() === pageOwner.toLowerCase();
 }
 
@@ -58,7 +50,6 @@ export function isOwnProfile() {
 export async function selectComparisonUser() {
     const currentProfileUser = getPageOwner();
     
-    // Create modal overlay
     const modal = document.createElement('div');
     modal.className = 'comparison-modal-overlay';
     modal.innerHTML = `
@@ -83,11 +74,8 @@ export async function selectComparisonUser() {
     
     document.body.appendChild(modal);
     
-    // Fetch users
     const users = await fetchAvailableUsers();
-    
-    // ✅ Show ALL users (including the current page owner)
-    const availableUsers = users;
+    const availableUsers = users; // Show everyone
     
     if (availableUsers.length === 0) {
         modal.querySelector('.comparison-modal-body').innerHTML = `
@@ -99,10 +87,8 @@ export async function selectComparisonUser() {
         return null;
     }
     
-    // Get stored username to highlight it
     const storedUsername = getStoredUsername();
     
-    // Build user list
     const userListHTML = availableUsers.map(user => {
         const isSelected = storedUsername && storedUsername.toLowerCase() === user.login.toLowerCase();
         return `
@@ -125,7 +111,6 @@ export async function selectComparisonUser() {
         </div>
     `;
     
-    // Return a promise that resolves when user selects
     return new Promise((resolve) => {
         const userItems = modal.querySelectorAll('.comparison-user-item');
         userItems.forEach(item => {
@@ -135,8 +120,6 @@ export async function selectComparisonUser() {
                 setStoredUsername(username);
                 modal.remove();
                 
-                // If we identify ourselves as the owner of the current page,
-                // reload immediately so the Compare Button disappears.
                 if (username.toLowerCase() === currentProfileUser.toLowerCase()) {
                     window.location.reload(); 
                 } else {
@@ -145,13 +128,11 @@ export async function selectComparisonUser() {
             });
         });
         
-        // Cancel button
         modal.querySelector('.cancel').addEventListener('click', () => {
             modal.remove();
             resolve(null);
         });
         
-        // Close on overlay click
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.remove();
@@ -162,7 +143,7 @@ export async function selectComparisonUser() {
 }
 
 /**
- * Fetches all available users from the hub (root repo + forks)
+ * Fetches all available users from the hub
  */
 async function fetchAvailableUsers() {
     try {
@@ -171,11 +152,9 @@ async function fetchAvailableUsers() {
         let owner, repo;
         
         if (host.endsWith('.github.io') && path.length > 0) {
-            // Live Site Logic
             owner = host.replace('.github.io', '');
             repo = path[0];
         } else {
-            // Localhost Fallback Logic
             owner = 'Roschach96'; 
             repo = 'achievement-viewer';
         }
@@ -183,7 +162,6 @@ async function fetchAvailableUsers() {
         const repoInfo = await fetch(`https://api.github.com/repos/${owner}/${repo}`).then(r => r.ok ? r.json() : null);
         if (!repoInfo) return [];
         
-        // Find the absolute root (if Roschach96 was a fork, find the parent, otherwise use Roschach96)
         const rootOwner = repoInfo.fork && repoInfo.parent ? repoInfo.parent.owner.login : repoInfo.owner.login;
         const rootRepo = repoInfo.fork && repoInfo.parent ? repoInfo.parent.name : repoInfo.name;
         
@@ -219,7 +197,6 @@ async function fetchAvailableUsers() {
  */
 export async function loadOwnGameData(appId) {
     const ownUsername = getStoredUsername();
-    
     if (!ownUsername) return null;
     
     const cacheKey = `${ownUsername}_${appId}`;
@@ -414,12 +391,21 @@ function renderComparisonAchievement(ach) {
     const isHidden = ach.hidden === true || ach.hidden === 1;
     const hasDescription = ach.description && ach.description.trim() !== '';
     
-    let descriptionHTML = hasDescription 
-        ? `<div class="achievement-desc">${ach.description}</div>`
-        : `<div class="achievement-desc hidden-desc">Hidden achievement</div>`;
-
-    if (isHidden && hasDescription) {
-        descriptionHTML = `<div class="achievement-desc hidden-spoiler">Hidden:<span class="hidden-spoiler-text">${ach.description}</span></div>`;
+    // 1. Text Fix: Changed "Hidden:" to "Hidden achievement:" to match normal view
+    let descriptionHTML = '';
+    
+    if (isHidden) {
+        if (hasDescription) {
+            descriptionHTML = `<div class="achievement-desc hidden-spoiler">Hidden achievement:<span class="hidden-spoiler-text">${ach.description}</span></div>`;
+        } else {
+            descriptionHTML = `<div class="achievement-desc hidden-desc">Hidden achievement</div>`;
+        }
+    } else {
+        if (hasDescription) {
+            descriptionHTML = `<div class="achievement-desc">${ach.description}</div>`;
+        } else {
+            descriptionHTML = `<div class="achievement-desc hidden-desc">Hidden achievement</div>`;
+        }
     }
 
     const rarityNum = ach.rarity ? parseFloat(ach.rarity) : null;
@@ -446,9 +432,17 @@ function renderComparisonAchievement(ach) {
             break;
     }
 
+    // 2. Icon Logic Fix: Now correctly handles gray icons for locked achievements
+    // Logic: If the achievement is colored (unlocked for ANYONE), use colored icon.
+    // If it's 'both-locked', use the gray icon.
+    const showColor = ach.status !== 'both-locked';
+    const iconSrc = showColor ? ach.icon : (ach.icongray || ach.icon);
+
     return `
         <div class="comparison-achievement ${statusClass}" data-status="${ach.status}">
-            ${ach.icon ? `<img src="${ach.icon}" class="achievement-icon ${isRare ? 'rare-glow' : ''}">` : `<div class="achievement-icon"></div>`}
+            ${iconSrc ? 
+                `<img src="${iconSrc}" class="achievement-icon ${isRare ? 'rare-glow' : ''}" onerror="this.style.display='none'">` : 
+                `<div class="achievement-icon ${isRare ? 'rare-glow' : ''}"></div>`}
             
             <div class="achievement-info">
                 <div class="achievement-name">${ach.name}</div>
@@ -457,6 +451,10 @@ function renderComparisonAchievement(ach) {
                     ${ach.yourUnlockTime > 0 ? `<div class="unlock-time-you">You: ${formatDate(ach.yourUnlockTime)}</div>` : ''}
                     ${ach.theirUnlockTime > 0 ? `<div class="unlock-time-them">Them: ${formatDate(ach.theirUnlockTime)}</div>` : ''}
                 </div>
+                
+                ${rarityNum !== null && !isNaN(rarityNum) ? 
+                    `<div class="achievement-rarity ${isRare ? 'rarity-rare' : ''}">${rarityNum.toFixed(1)}% of players have this</div>` : 
+                    ''}
             </div>
             ${statusBadge}
         </div>
