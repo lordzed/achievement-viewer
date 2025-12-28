@@ -83,7 +83,7 @@ export async function selectComparisonUser() {
     modal.innerHTML = `
         <div class="comparison-modal">
             <div class="comparison-modal-header">
-                <h3>Select User to Compare With</h3>
+                <h3>Choose your username</h3>
                 <button class="comparison-modal-close" onclick="this.closest('.comparison-modal-overlay').remove()">×</button>
             </div>
             <div class="comparison-modal-body">
@@ -535,23 +535,38 @@ export async function changeComparisonUser() {
     const selected = await selectComparisonUser();
     
     if (selected) {
-        // Clear cache to force reload
+        // 1. Clear the cache so we don't accidentally pull the previous user's data
         comparisonCache.clear();
         
-        // Directly trigger the data loading and rendering 
-        // instead of calling enableCompareMode (which might re-open the modal)
+        // 2. Extract current game info from global state
         const { appId, game } = window.currentGameData;
         
-        // Show loading state
+        // 3. Set a temporary loading state in the UI
         window.currentGameData.compareMode = true;
-        window.renderGameDetail();
+        window.currentGameData.comparisonData = { hasData: false, loading: true };
+        window.renderGameDetail(); // This closes the modal and shows a "loading" view
         
-        // Load the newly selected user's data
-        const ownData = await loadOwnGameData(appId);
-        const comparisonData = compareAchievements(game, ownData);
-        
-        window.currentGameData.comparisonData = comparisonData;
-        window.renderGameDetail();
+        try {
+            // 4. Load the new user's achievement data
+            const ownData = await loadOwnGameData(appId);
+            
+            // 5. Run the comparison logic against the new data
+            const comparisonData = compareAchievements(game, ownData);
+            
+            // 6. Update the global state with the new results
+            window.currentGameData.comparisonData = comparisonData;
+            
+            // 7. FINAL RENDER: This draws the new comparison list and stats
+            window.renderGameDetail();
+            
+            // 8. Re-initialize filters for the new list
+            setupComparisonFilters();
+            
+        } catch (error) {
+            console.error("Failed to change comparison user:", error);
+            window.currentGameData.compareMode = false;
+            window.renderGameDetail();
+        }
     }
 }
 
