@@ -60,42 +60,69 @@ async function loadGameData(person) {
   let perfect = 0;
 
   for (const g of data) {
-    // Get blacklist from info if available
+    // IMPORTANT: The blacklist has already been applied during game-data.json generation
+    // by GameLoader.js. The achievements in g.achievements are already filtered.
+    // We should NOT try to re-apply the blacklist here.
+    
+    // However, we need to determine the TOTAL count of achievements for this game.
+    // We have two sources:
+    // 1. g.info.achievements - the full schema (if available)
+    // 2. g.achievements - the user's save data
+    
     const blacklist = g.info?.blacklist || [];
     
-    // DETERMINING THE UNIVERSE OF ACHIEVEMENTS
-    // 1. Try to use the full schema from g.info.achievements (contains locked & unlocked)
-    // 2. Fallback to g.achievements (only contains what's in the save file)
-    const schemaSource = (g.info && g.info.achievements && Object.keys(g.info.achievements).length > 0) 
-                       ? g.info.achievements 
-                       : g.achievements;
-
-    // Get all achievement keys from the source of truth
-    const allAchKeys = Object.keys(schemaSource);
+    // Check if we have a full schema in game-info
+    const hasFullSchema = g.info && 
+                         g.info.achievements && 
+                         Object.keys(g.info.achievements).length > 0;
     
-    // Filter out blacklisted achievements
-    const validAchKeys = allAchKeys.filter(key => !blacklist.includes(key));
-    
-    // Count earned achievements
+    let totalCount = 0;
     let earnedCount = 0;
-    for (const key of validAchKeys) {
-      // Check status in the actual user data (g.achievements)
-      const userAch = g.achievements[key];
-      
-      // We must check if userAch exists because if the save file only stores
-      // unlocked achievements, locked ones won't be in g.achievements at all.
-      if (userAch && (userAch.earned === true || userAch.earned === 1)) {
-        earnedCount++;
-      }
-    }
+    let canDeterminePerfect = false;
     
-    const totalCount = validAchKeys.length;
+    if (hasFullSchema) {
+      // We have the full achievement schema from game-info.json
+      // Count the total AFTER applying blacklist (since schema has everything)
+      const schemaKeys = Object.keys(g.info.achievements);
+      const validSchemaKeys = schemaKeys.filter(key => !blacklist.includes(key));
+      totalCount = validSchemaKeys.length;
+      
+      // Count how many of these are actually earned in the save data
+      for (const key of validSchemaKeys) {
+        const userAch = g.achievements[key];
+        if (userAch && (userAch.earned === true || userAch.earned === 1)) {
+          earnedCount++;
+        }
+      }
+      
+      canDeterminePerfect = true;
+    } else {
+      // No full schema available
+      // The user's save file might only contain unlocked achievements
+      // We can count achievements but can't reliably determine if it's perfect
+      const saveKeys = Object.keys(g.achievements);
+      totalCount = saveKeys.length;
+      
+      for (const key of saveKeys) {
+        const userAch = g.achievements[key];
+        if (userAch && (userAch.earned === true || userAch.earned === 1)) {
+          earnedCount++;
+        }
+      }
+      
+      // CRITICAL FIX: If save file only has unlocked achievements,
+      // we can't determine if it's a perfect game
+      canDeterminePerfect = false;
+    }
     
     earnedAchievements += earnedCount;
     totalAchievements += totalCount;
     
-    // Check if it's a perfect game
-    if (totalCount > 0 && earnedCount === totalCount) {
+    // Only count as perfect if:
+    // 1. We have the full schema (canDeterminePerfect = true)
+    // 2. There are achievements to earn (totalCount > 0)
+    // 3. All valid achievements are earned (earnedCount === totalCount)
+    if (canDeterminePerfect && totalCount > 0 && earnedCount === totalCount) {
       perfect++;
     }
   }
