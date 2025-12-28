@@ -537,10 +537,21 @@ export async function changeComparisonUser() {
     if (selected) {
         // Clear cache to force reload
         comparisonCache.clear();
-        // Trigger re-render if in compare mode
-        if (window.enableCompareMode) {
-            window.enableCompareMode();
-        }
+        
+        // Directly trigger the data loading and rendering 
+        // instead of calling enableCompareMode (which might re-open the modal)
+        const { appId, game } = window.currentGameData;
+        
+        // Show loading state
+        window.currentGameData.compareMode = true;
+        window.renderGameDetail();
+        
+        // Load the newly selected user's data
+        const ownData = await loadOwnGameData(appId);
+        const comparisonData = compareAchievements(game, ownData);
+        
+        window.currentGameData.comparisonData = comparisonData;
+        window.renderGameDetail();
     }
 }
 
