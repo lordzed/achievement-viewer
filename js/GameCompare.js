@@ -17,15 +17,27 @@ function setStoredUsername(username) {
 }
 
 /**
+ * Detects who owns the current page.
+ * Prioritizes window.githubUsername but ignores the default "User".
+ */
+function getPageOwner() {
+    let owner = window.githubUsername;
+    
+    // If the global var is missing or is the generic default "User", 
+    // fall back to the hostname (e.g., 'roschach96' from 'roschach96.github.io')
+    if (!owner || owner === 'User') {
+        owner = window.location.hostname.split('.')[0];
+    }
+    
+    return owner || 'unknown';
+}
+
+/**
  * Detects if the person browsing IS the person who owns the page.
- * Logic:
- * 1. PAGE OWNER: Get from window.githubUsername (set by your utils.js/main.js)
- * 2. VISITOR: Get from localStorage (set by this file)
- * 3. Returns FALSE if we don't know who the visitor is (so the button appears).
  */
 export function isOwnProfile() {
     // 1. Who owns the page? (The Host)
-    const pageOwner = window.githubUsername || window.location.hostname.split('.')[0] || 'unknown';
+    const pageOwner = getPageOwner();
     
     // 2. Who is the visitor? (The Guest)
     const visitor = getStoredUsername();
@@ -44,7 +56,7 @@ export function isOwnProfile() {
  * Shows a modal dialog to select comparison user
  */
 export async function selectComparisonUser() {
-    const currentProfileUser = window.githubUsername || window.location.hostname.split('.')[0] || 'unknown';
+    const currentProfileUser = getPageOwner();
     
     // Create modal overlay
     const modal = document.createElement('div');
@@ -75,7 +87,6 @@ export async function selectComparisonUser() {
     const users = await fetchAvailableUsers();
     
     // ✅ Show ALL users (including the current page owner)
-    // This allows you to select yourself even when visiting your own page
     const availableUsers = users;
     
     if (availableUsers.length === 0) {
@@ -334,7 +345,7 @@ export function renderComparisonView(theirGame, comparisonData, theirUsername) {
             <div class="comparison-unavailable">
                 <div class="comparison-unavailable-icon">🔒</div>
                 <h3>No Data Found</h3>
-                <p>Could not find achievement data for <strong>${theirGame.name}</strong> on <strong>Your</strong> profile.</p>
+                <p>Could not find achievement data for <strong>${theirGame.name}</strong> on <strong>${ownUsername}</strong>'s profile.</p>
                 <button class="compare-button" onclick="window.changeComparisonUser()" style="margin-top: 15px;">
                     🔄 Select Different User
                 </button>
