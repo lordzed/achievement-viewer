@@ -1,4 +1,5 @@
 import { getGitHubUserInfo } from './utils.js';
+import { checkPassport } from './GameCompare.js';
 
 let userInfo = getGitHubUserInfo();
 let baseUrl = `https://raw.githubusercontent.com/${userInfo.username}/${userInfo.repo}/user/`;
@@ -152,6 +153,9 @@ async function processGameData(appId, achievementsData, gameInfo = null) {
 
 // Initialization
 export async function init() {
+  // Check for "Passport" (visitor username in URL)
+  checkPassport();
+
   document.getElementById('loading').style.display = 'block';
 
   if (!userInfo) {

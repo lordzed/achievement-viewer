@@ -1,4 +1,5 @@
 import { detectRepo, resolveRootRepo, fetchAllForks, fetchJSON } from './utils.js';
+import { getStoredUsername } from './GameCompare.js';
 
 async function loadGameData(person) {
   const url = `https://raw.githubusercontent.com/${person.login}/${person.repo || 'achievement-viewer'}/user/game-data.json`;
@@ -103,7 +104,14 @@ async function addUserToGrid(person) {
   `;
 
   card.addEventListener('mousedown', (e) => {
-    const url = `https://${person.login}.github.io/${person.repo || 'achievement-viewer'}/`;
+    let url = `https://${person.login}.github.io/${person.repo || 'achievement-viewer'}/`;
+    
+    // Pass visitor identity to the destination
+    const visitor = getStoredUsername();
+    if (visitor) {
+      url += `?vs=${visitor}`;
+    }
+
     if (e.button === 0 || e.button === 1) {
       if (e.button === 1) e.preventDefault();
       window.open(url, '_blank');
@@ -164,7 +172,14 @@ function renderFiltered() {
     `;
     
     card.addEventListener('mousedown', (e) => {
-      const url = `https://${user.login}.github.io/${user.repo || 'achievement-viewer'}/`;
+      let url = `https://${user.login}.github.io/${user.repo || 'achievement-viewer'}/`;
+      
+      // Pass visitor identity to the destination
+      const visitor = getStoredUsername();
+      if (visitor) {
+        url += `?vs=${visitor}`;
+      }
+
       if (e.button === 0 || e.button === 1) {
         if (e.button === 1) e.preventDefault();
         window.open(url, '_blank');

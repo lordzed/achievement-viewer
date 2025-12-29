@@ -45,6 +45,24 @@ export function isOwnProfile() {
 }
 
 /**
+ * Checks URL for 'vs' parameter (Passport feature)
+ * If present, sets the visitor username and cleans the URL
+ */
+export function checkPassport() {
+    const params = new URLSearchParams(window.location.search);
+    const passportUser = params.get('vs');
+    
+    if (passportUser) {
+        setStoredUsername(passportUser);
+        
+        // Optional: Clean the URL so the param doesn't persist
+        const newUrl = new URL(window.location.href);
+        newUrl.searchParams.delete('vs');
+        window.history.replaceState({}, '', newUrl);
+    }
+}
+
+/**
  * Shows a modal dialog to select comparison user
  */
 export async function selectComparisonUser() {
