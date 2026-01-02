@@ -19,7 +19,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/230410/fa11850aa54af2e6ff4a23382c47272052e252ad.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "64.8"
+      "percent": "64.9"
     },
     "ACHIEVEMENT_179": {
       "name": "Airborne Exterminator",
@@ -703,7 +703,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/230410/c4e2d3366a6e58ee17b0e3414f45c101f74f2ed7.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "40.5"
+      "percent": "40.6"
     },
     "ACHIEVEMENT_140": {
       "name": "Into the Void",
@@ -1459,7 +1459,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/230410/05da5b280021b8f8bb247e9af5067c58443bacc5.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "29.1"
+      "percent": "29.2"
     },
     "ACHIEVEMENT_64": {
       "name": "Silver Novice",
@@ -1468,7 +1468,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/230410/d83fcd3be717ad44b77678a3af5124a360414bf2.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "17.3"
+      "percent": "17.4"
     },
     "ACHIEVEMENT_85": {
       "name": "Silver Sage",
@@ -1522,7 +1522,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/230410/ab15e5f88b328c4cd1ed788fa51204425a498385.jpg",
       "hidden": false,
       "group": "Update 6",
-      "percent": "8.8"
+      "percent": "8.7"
     },
     "ACHIEVEMENT_127": {
       "name": "Special Agent",

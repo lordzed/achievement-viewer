@@ -199,7 +199,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1238020/847651bbf851ab9a0a7dae9c9acb5653e274999d.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "31.0"
+      "percent": "30.9"
     },
     "Achievement_GOSCC_165": {
       "name": "High Society",
@@ -379,7 +379,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1238020/1a83400794256519c16bee12c0e3e1a34cfbcf42.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "27.0"
+      "percent": "26.9"
     },
     "Achievement_GOSCC_151": {
       "name": "Peak Condition",
@@ -424,7 +424,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1238020/0d7bd344ea5574e24ffc0e01f8703cdd1ae67dd1.jpg",
       "hidden": false,
       "group": "Mass Effect™ 3 From Ashes",
-      "percent": "35.7"
+      "percent": "35.6"
     },
     "Achievement_GOSCC_137": {
       "name": "Pyromaniac",
@@ -541,7 +541,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1238020/96d05e5e17fb78dffb7c8439519d8fe65c342e01.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "30.6"
+      "percent": "30.5"
     },
     "Achievement_GOSCC_147": {
       "name": "Tourist",
@@ -604,7 +604,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1238020/3320dd556f5cb425c3039f0cb0697fbe3f1fef10.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "29.1"
+      "percent": "29.0"
     },
     "Achievement_GOSCC_105": {
       "name": "World Shaker",
@@ -613,7 +613,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1238020/046d525f62e1a20b127d19c742ac3ebd1a6232b9.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "37.9"
+      "percent": "37.8"
     }
   },
   "platform": "EA",

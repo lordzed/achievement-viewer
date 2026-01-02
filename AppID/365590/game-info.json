@@ -262,7 +262,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/365590/e2dcbbceb0e2b49389ac0d3395c5e34b87f2845f.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "2.5"
+      "percent": "2.6"
     },
     "Division_Ach_31": {
       "name": "Natural Talent",
@@ -433,7 +433,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/365590/15558a8340222c1e76bcf0a6cd7de27aa0aa6fd9.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "5.9"
+      "percent": "6.0"
     },
     "Division_Ach_23": {
       "name": "The Engineer",
@@ -460,7 +460,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/365590/d5ab2a038bdb17924524b43fb149d594c2f879a8.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "0.8"
+      "percent": "0.9"
     },
     "Division_Ach_29": {
       "name": "The Humanitarian",

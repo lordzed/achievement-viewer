@@ -64,7 +64,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/387290/333e449ece01106add0094b59cf2465fb6d226dc.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "21.3"
+      "percent": "21.2"
     },
     "crushRamWithStomper": {
       "name": "Crushing Blow",
@@ -91,7 +91,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/387290/786108f835cac477dcaddef0240ab9c446edc52c.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "28.0"
+      "percent": "27.9"
     },
     "killManyWithChargeFlame": {
       "name": "Deadly Detonation",
@@ -208,7 +208,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/387290/c721a74e9d75dd221de36a3a10891a2e08d54769.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "36.4"
+      "percent": "36.3"
     },
     "juggleRock": {
       "name": "Juggle Master",
@@ -307,7 +307,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/387290/c3db5dd63b4d59389ba3cf324e1e1bc15ea13700.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "42.3"
+      "percent": "42.2"
     },
     "collectAllSkills": {
       "name": "Phenom",
@@ -325,7 +325,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/387290/6dc6c92be86489f9e1229bbb32e20429bcbe465a.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "33.3"
+      "percent": "33.2"
     },
     "collectAllEnergyCells": {
       "name": "Powerhouse ",
@@ -343,7 +343,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/387290/52a74733be480eb7222905cbbbc0ffb3da56d5f1.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "33.9"
+      "percent": "33.8"
     },
     "restoreFire": {
       "name": "Rekindle",
@@ -415,7 +415,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/387290/ee3997289012712253ce1dfd1016245069f22e94.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "39.2"
+      "percent": "39.1"
     },
     "collectBranchOneSkills": {
       "name": "Soul Master",
@@ -505,7 +505,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/387290/2b6de11cc60502275afcea1ceab9ae4c9996c1bd.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "22.7"
+      "percent": "22.6"
     },
     "findAllMapStones": {
       "name": "World at Your Feet",

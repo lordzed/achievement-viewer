@@ -10,7 +10,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/dea61e1cd99e4d68d882306eea7fb618561f196e.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "6.2"
+      "percent": "6.1"
     },
     "trk_hm_0": {
       "name": "*Click*",
@@ -73,7 +73,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/5d1fa39f9d03ff18dbeae7e3856ba91e23a28b9d.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "7.2"
+      "percent": "7.1"
     },
     "ovk_7": {
       "name": "120 Proof",
@@ -199,7 +199,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/8a5b889e20a9e08a59ec1089f02bf72456b5297d.jpg",
       "hidden": false,
       "group": "Update 12",
-      "percent": "9.5"
+      "percent": "9.4"
     },
     "wwh_4": {
       "name": "A Cold Deal",
@@ -370,7 +370,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/631cff90d64deabef417bb0b5630095a8cc10755.jpg",
       "hidden": false,
       "group": "Update 12",
-      "percent": "6.8"
+      "percent": "6.7"
     },
     "orange_5": {
       "name": "A Long Night of Horrors",
@@ -856,7 +856,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/94168603820c5f19668561155a877fa3e45d641b.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "60.0"
+      "percent": "59.9"
     },
     "gage5_3": {
       "name": "Army of One",
@@ -1252,7 +1252,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/4595b3e3c7092e6ae4b4b0706c674e1e2374691d.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "6.3"
+      "percent": "6.2"
     },
     "ignominy_2": {
       "name": "Becoming Disgraceful",
@@ -1261,7 +1261,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/3bd94cfb73e78ca0c820514e0f1065d55297d362.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "11.5"
+      "percent": "11.4"
     },
     "ignominy_14": {
       "name": "Becoming Disreputable",
@@ -1414,7 +1414,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/a1ab83934530f9f3fd2ccdbc99f6a726920ef372.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "6.5"
+      "percent": "6.4"
     },
     "ignominy_22": {
       "name": "Becoming Shameless",
@@ -1837,7 +1837,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/58c40ab48132baade2b875ccb4a8a21ab55fb88e.jpg",
       "hidden": false,
       "group": "Update 12",
-      "percent": "10.0"
+      "percent": "9.9"
     },
     "ovk_9": {
       "name": "Bring Your Cop To Work Day",
@@ -2224,7 +2224,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/d4111431fb1cd51b4174102fd3c4cbbb7d6583dd.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "9.5"
+      "percent": "9.4"
     },
     "tango_achieve_4": {
       "name": "Celsius or Fahrenheit?",
@@ -2314,7 +2314,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/92a415c2b9e4591af5682c9814b400c6dc80aae4.jpg",
       "hidden": false,
       "group": "Update 4",
-      "percent": "3.9"
+      "percent": "3.8"
     },
     "kenaz_3": {
       "name": "City of Sin and Well-Oiled Gears",
@@ -2395,7 +2395,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/1b4d4afcc0b62040a1fc44798325f87946fb26ac.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "5.3"
+      "percent": "5.2"
     },
     "trk_pn_3": {
       "name": "Cloaker Phantasm",
@@ -2485,7 +2485,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/e574a3a91957f7602325aac1255301e15fc2cc14.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "5.3"
+      "percent": "5.2"
     },
     "cac_1": {
       "name": "Compact Confrontation",
@@ -2566,7 +2566,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/8dbb1be8e642a8095f492c67d5e2a45931b93733.jpg",
       "hidden": false,
       "group": "Update 12",
-      "percent": "13.5"
+      "percent": "13.4"
     },
     "mex2_1": {
       "name": "Cooking in the Sun",
@@ -2881,7 +2881,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/df33a416ca9774d696c8a7e932bbe55c1a0b1688.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "5.8"
+      "percent": "5.7"
     },
     "mex_7": {
       "name": "Death in the Desert",
@@ -2908,7 +2908,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/e2a437f8f8c838536eabe8f59ceca97a928bde70.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "8.5"
+      "percent": "8.4"
     },
     "trk_cc_1": {
       "name": "Deja Vu",
@@ -3214,7 +3214,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/3594b4bfda84a9ccf2e336ffdd460897f8e1ef54.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "5.5"
+      "percent": "5.4"
     },
     "bigbank_5": {
       "name": "Don't Bring the Heat",
@@ -3223,7 +3223,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/66493c7396e6b075a3551cd3ddc7fa66538da0fc.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "8.4"
+      "percent": "8.3"
     },
     "skm_3": {
       "name": "Don't Forget to Bring Rain Man",
@@ -3709,7 +3709,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/fc6b7087a2f31b544448e444ae0b4005292a6fd4.jpg",
       "hidden": false,
       "group": "Update 16",
-      "percent": "3.6"
+      "percent": "3.5"
     },
     "f_in_chemistry": {
       "name": "F in Chemistry",
@@ -3745,7 +3745,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/35e6adcdfb0f85840f49515dd3783cb44e42ed52.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "7.1"
+      "percent": "7.0"
     },
     "peta_5": {
       "name": "Farmer Miserable",
@@ -4375,7 +4375,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/0b9a6ce9ebf75dba9909a7bb452d186c2b1b4910.jpg",
       "hidden": false,
       "group": "Update 18",
-      "percent": "2.9"
+      "percent": "2.8"
     },
     "trk_cc_5": {
       "name": "Glory Days",
@@ -4429,7 +4429,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/382bae855e02fb144c8343cd2ecd53552d119469.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "42.8"
+      "percent": "42.7"
     },
     "pick_18": {
       "name": "Gold Rush",
@@ -4438,7 +4438,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/fe6f0913567d7c9aac7278fda69e6464f18542a9.jpg",
       "hidden": false,
       "group": "Update 2",
-      "percent": "17.3"
+      "percent": "17.2"
     },
     "cac_7": {
       "name": "Golden Grin Anonymous",
@@ -4501,7 +4501,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/534756e9e799b5e25260b7aeda4eab96f56f6b1b.jpg",
       "hidden": false,
       "group": "Update 12",
-      "percent": "13.6"
+      "percent": "13.5"
     },
     "ggez_72": {
       "name": "Gravy Train",
@@ -4510,7 +4510,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/830c4f90fc5f736eb3a3067e7a7c697e2d69bbc0.jpg",
       "hidden": false,
       "group": "Update 16",
-      "percent": "4.7"
+      "percent": "4.6"
     },
     "fish_2": {
       "name": "Great White",
@@ -4735,7 +4735,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/ed277fc56d508831f525b3c1a72660a29d067b0b.jpg",
       "hidden": false,
       "group": "Update 2",
-      "percent": "5.3"
+      "percent": "5.2"
     },
     "trk_bc_1": {
       "name": "Harvest & Not So Trustee",
@@ -4744,7 +4744,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/1cbda95718c1081da1100f701ca5d2641e923dcc.jpg",
       "hidden": false,
       "group": "Update 12",
-      "percent": "20.1"
+      "percent": "20.0"
     },
     "orange_3": {
       "name": "Haunted House of Heisters",
@@ -4771,7 +4771,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/9bbab358b78d94451f924d93ef47eb20acc24131.jpg",
       "hidden": false,
       "group": "Update 12",
-      "percent": "6.9"
+      "percent": "6.8"
     },
     "peta_3": {
       "name": "Hazzard County",
@@ -5050,7 +5050,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/37c4673b39733b69525cb762049e248962820f65.jpg",
       "hidden": false,
       "group": "Update 15",
-      "percent": "6.4"
+      "percent": "6.3"
     },
     "skm_21": {
       "name": "Hide Them in the Vault",
@@ -5383,7 +5383,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/faaeeec3f25ac251eedec8bb96d3adb93ddaac30.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "11.8"
+      "percent": "11.7"
     },
     "halloween_1": {
       "name": "I Am the One Who Knocks",
@@ -5473,7 +5473,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/e10a44a3a4f72492a8e8ceb8d199fb2994900d06.jpg",
       "hidden": false,
       "group": "Update 2",
-      "percent": "9.0"
+      "percent": "8.9"
     },
     "trk_d_0": {
       "name": "I Know Who You Are",
@@ -6499,7 +6499,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/453240763fa1645a48241deca72bfe8684e43f46.jpg",
       "hidden": false,
       "group": "Update 12",
-      "percent": "10.7"
+      "percent": "10.6"
     },
     "death_5": {
       "name": "Like a Fucking Sputnik!",
@@ -6508,7 +6508,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/6155f871a25860647e5d001866435061d702e024.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "6.4"
+      "percent": "6.3"
     },
     "trk_sr_3": {
       "name": "Like a Shimmer Through the Night",
@@ -6589,7 +6589,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/e2fca6469dc18c54fb0e084bbd1f0434af35a458.jpg",
       "hidden": false,
       "group": "Update 12",
-      "percent": "20.6"
+      "percent": "20.5"
     },
     "ggez_20": {
       "name": "Lockpicking Masters",
@@ -6652,7 +6652,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/f4dd7b2f08087c4c63fd906d28b70efaf8fd847c.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "12.7"
+      "percent": "12.6"
     },
     "lord_of_war": {
       "name": "Lord of War",
@@ -6868,7 +6868,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/6d46a464aeeddbbcc73fb39689c16e0748745515.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "12.7"
+      "percent": "12.6"
     },
     "chca_10": {
       "name": "Master of Floatation",
@@ -6886,7 +6886,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/7287dc934f32a9d62eb8a1ded78f620cc6b2b6cb.jpg",
       "hidden": false,
       "group": "Update 2",
-      "percent": "4.3"
+      "percent": "4.2"
     },
     "chca_4": {
       "name": "Master of the Poop Deck",
@@ -7444,7 +7444,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/a4fad307f771e37c9df83e8853c408b7d9566a0f.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "5.5"
+      "percent": "5.4"
     },
     "farm_1": {
       "name": "Not Hard Enough",
@@ -7480,7 +7480,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/a0cde2c1dbb3de1cec281871366ee43950cd1785.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "6.2"
+      "percent": "6.1"
     },
     "trk_dm_2": {
       "name": "Not Just Any Diamond",
@@ -7867,7 +7867,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/edfc40bdee27c42295d3ea202b92c690758744ec.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "13.6"
+      "percent": "13.5"
     },
     "death_30": {
       "name": "OVERKILL Salutes You!",
@@ -7876,7 +7876,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/59d17178417f6fa105704401dc3e25cd53f206fc.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "5.9"
+      "percent": "5.8"
     },
     "pent_7": {
       "name": "Overstayed Your Welcome",
@@ -8038,7 +8038,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/4ea3b99fa00e2f3601c652a67ddc2859fd943b9e.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "6.2"
+      "percent": "6.1"
     },
     "gage3_5": {
       "name": "Pest Control",
@@ -8056,7 +8056,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/49883f7c9dc235fafc17c18051f1a29f9689ba03.jpg",
       "hidden": false,
       "group": "Update 16",
-      "percent": "7.3"
+      "percent": "7.2"
     },
     "ggez_53": {
       "name": "Petty Crimes",
@@ -8074,7 +8074,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/4035401f5099c7a8fd3d438343965c57074be907.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "13.3"
+      "percent": "13.2"
     },
     "trk_tp_0": {
       "name": "Picnic",
@@ -8515,7 +8515,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/d090bae38b960f9f975b7d36acf2c8900428b282.jpg",
       "hidden": false,
       "group": "Update 12",
-      "percent": "6.9"
+      "percent": "6.8"
     },
     "trk_br_1": {
       "name": "Random Access Larceny",
@@ -8560,7 +8560,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/1307390dba0b3c458fe9ebb80cde81a4ceab512c.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "5.7"
+      "percent": "5.6"
     },
     "cac_13": {
       "name": "Remember, No Russian",
@@ -9559,7 +9559,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/811109726dd896f23c8c92a2c39e469beddcbc55.jpg",
       "hidden": false,
       "group": "Update 18",
-      "percent": "3.2"
+      "percent": "3.1"
     },
     "tag_11": {
       "name": "Staple Relationship",
@@ -9604,7 +9604,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/cb1fe3d65cbb7c5bca0f67216aacd86b696e1563.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "14.4"
+      "percent": "14.3"
     },
     "trk_ag_3": {
       "name": "Stealing Is a Form of Art",
@@ -10324,7 +10324,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/1fc182627b487f2528714893020795586329f43a.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "5.6"
+      "percent": "5.5"
     },
     "trk_ed_2": {
       "name": "The Most Honest Political Move",
@@ -10405,7 +10405,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/5fbe98dc496b643f34a9bf59b01b7ccae52ea01f.jpg",
       "hidden": false,
       "group": "Update 12",
-      "percent": "12.6"
+      "percent": "12.5"
     },
     "trai_6": {
       "name": "The Payday Express",
@@ -10720,7 +10720,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/51887a58060bc58837f66e92ab64d481fc558686.jpg",
       "hidden": false,
       "group": "Update 12",
-      "percent": "4.3"
+      "percent": "4.2"
     },
     "trk_ev_1": {
       "name": "This is Not Normal? Is It?",
@@ -10810,7 +10810,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/a1b7a6e73ad89ef2a79b3edafcd247ff6abca642.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "48.3"
+      "percent": "48.2"
     },
     "trk_sa_0": {
       "name": "Too Close to Home",
@@ -10855,7 +10855,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/741131d9cea53608e9821b9e97ff5233e765ab17.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "7.0"
+      "percent": "6.9"
     },
     "trk_tu_1": {
       "name": "Traffic Congestion",
@@ -11008,7 +11008,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/bf21b78229ddcdbdd782e4edbc6161814c6b8e5c.jpg",
       "hidden": false,
       "group": "Update 14",
-      "percent": "3.1"
+      "percent": "3.0"
     },
     "gage5_6": {
       "name": "Unusual Suspects",
@@ -11053,7 +11053,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/2753dbc0e1a3fd4396821a8178c2e9e0720290dc.jpg",
       "hidden": false,
       "group": "Update 2",
-      "percent": "4.5"
+      "percent": "4.4"
     },
     "ggez_71": {
       "name": "Urban Hiking",
@@ -11323,7 +11323,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/f99bb3162e89f7a993de740fd3c0aea874b62f97.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "6.3"
+      "percent": "6.2"
     },
     "trk_bg_1": {
       "name": "We are Golden",
@@ -11620,7 +11620,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/4343159f0e68acfc4bb575d12773c3be5be4eec6.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "21.6"
+      "percent": "21.5"
     },
     "cac_8": {
       "name": "Why?",
@@ -11719,7 +11719,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/6cb8ecb1753a6439e3915bc6ee53f0571d4e8cec.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "61.2"
+      "percent": "61.1"
     },
     "skm_23": {
       "name": "Would you Rather Be Robbing the Place?",
@@ -11800,7 +11800,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/782b7bac5ed9200139f315d71fcbf6d042845aa4.jpg",
       "hidden": false,
       "group": "Update 25",
-      "percent": "2.5"
+      "percent": "2.4"
     },
     "pick_30": {
       "name": "You Can Only Plan to Fail",
@@ -11899,7 +11899,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/218620/6c89eb4777b15b4dd1a76de8bf751ba2190e4986.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "6.7"
+      "percent": "6.6"
     },
     "corp_3": {
       "name": "You’ve Got Blackmail",
