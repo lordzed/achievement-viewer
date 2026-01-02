@@ -65,13 +65,17 @@ export function displayGames() {
         searchDiv.classList.remove('hidden');
     }
 
-    // Calculate totals
-    let totalGames = gamesData.size;
+    // Get filtered games first
+    let sortedGames = sortGames(window.gridSortMode || 'percentage');
+    let filteredGames = applySearchFilter(sortedGames);
+
+    // Calculate totals based on filtered games
+    let totalGames = filteredGames.length;
     let totalAchievements = 0;
     let totalUnlocked = 0;
     let perfectGames = 0;
 
-    for (let game of gamesData.values()) {
+    for (let game of filteredGames) {
         totalAchievements += game.achievements.length;
         const unlocked = game.achievements.filter(a => a.unlocked).length;
         totalUnlocked += unlocked;
@@ -83,20 +87,69 @@ export function displayGames() {
 
     const overallPercentage = calculatePercentage(totalUnlocked, totalAchievements);
 
-    // Render summary
+    // Render summary with filtered stats
     renderSummary(summaryDiv, totalGames, perfectGames, totalUnlocked, totalAchievements, overallPercentage);
 
     // Render games grid
-    renderGamesGrid(resultsDiv);
+    renderGamesGrid(resultsDiv, filteredGames);
     
     // Backup call to adjust card heights
     setTimeout(adjustCardHeights, 50);
+}
+
+function applySearchFilter(games) {
+    if (!currentSearchTerm) {
+        return games;
+    }
+
+    const term = currentSearchTerm.toLowerCase().trim();
+    if (!term) {
+        return games;
+    }
+
+    return games.filter(game => {
+        // 1. Check Game Name
+        if (currentSearchType === 'name') {
+            return game.name.toLowerCase().includes(term);
+        }
+        
+        // 2. Check AppID
+        if (currentSearchType === 'appid') {
+            return game.appId.includes(term);
+        }
+        
+        // 3. Check Platform
+        if (currentSearchType === 'platform') {
+            const platform = game.platform || (game.usesDb ? 'Steam' : '');
+            return platform.toLowerCase().includes(term);
+        }
+        
+        // 4. Check Achievements
+        if (currentSearchType === 'achievement') {
+            return game.achievements.some(ach => {
+                const name = String(ach.name || '').toLowerCase();
+                const description = String(ach.description || '').toLowerCase();
+                const apiname = String(ach.apiname || '').toLowerCase();
+                
+                return name.includes(term) || description.includes(term) || apiname.includes(term);
+            });
+        }
+
+        return false;
+    });
 }
 
 function renderSummary(summaryDiv, totalGames, perfectGames, totalUnlocked, totalAchievements, overallPercentage) {
     summaryDiv.style.display = 'block';
 
     const gamerCard = window.gamerCardHTML || '';
+
+    // Show filter indicator if search is active
+    const filterIndicator = currentSearchTerm ? `
+        <div style="background: rgba(102, 192, 244, 0.1); border: 1px solid #66c0f4; border-radius: 6px; padding: 8px 15px; margin-top: 10px; font-size: 0.9em;">
+            📊 Showing filtered results for: <strong>"${currentSearchTerm}"</strong> in <strong>${getSearchTypeLabel()}</strong>
+        </div>
+    ` : '';
 
     summaryDiv.innerHTML = `
         <div class="summary" id="summary-box">
@@ -115,7 +168,9 @@ function renderSummary(summaryDiv, totalGames, perfectGames, totalUnlocked, tota
                 ${gamerCard ? `<div class="gamer-card-container">${gamerCard}</div>` : ''}
             </div>
             
-            <div class="progress-bar" style="max-width: 600px; margin: 0 auto;">
+            ${filterIndicator}
+            
+            <div class="progress-bar" style="max-width: 600px; margin: 15px auto 0;">
                 <div class="progress-fill ${overallPercentage < 6 ? 'low-percentage' : ''}" style="width: ${overallPercentage}%">${overallPercentage}%</div>
             </div>
             
@@ -143,7 +198,17 @@ function renderSummary(summaryDiv, totalGames, perfectGames, totalUnlocked, tota
     `;
 }
 
-function renderGamesGrid(resultsDiv) {
+function getSearchTypeLabel() {
+    switch(currentSearchType) {
+        case 'name': return 'Game Name';
+        case 'appid': return 'Steam AppID';
+        case 'platform': return 'Platform';
+        case 'achievement': return 'Achievement Info';
+        default: return 'Search';
+    }
+}
+
+function renderGamesGrid(resultsDiv, sortedGames) {
     // Check state for button styling
     const isSearchOpen = document.getElementById('search-container')?.style.display !== 'none';
 
@@ -176,52 +241,8 @@ function renderGamesGrid(resultsDiv) {
 
     let html = '<div class="games-grid" id="games-grid">';
 
-    let sortedGames = sortGames(window.gridSortMode || 'percentage');
-
-    // Apply Search Filter
-    if (currentSearchTerm) {
-        const term = currentSearchTerm.toLowerCase().trim();
-        if (term) {
-            sortedGames = sortedGames.filter(game => {
-                
-                // 1. Check Game Name
-                if (currentSearchType === 'name') {
-                    return game.name.toLowerCase().includes(term);
-                }
-                
-                // 2. Check AppID
-                if (currentSearchType === 'appid') {
-                    return game.appId.includes(term);
-                }
-                
-                // 3. Check Platform
-                if (currentSearchType === 'platform') {
-                    const platform = game.platform || (game.usesDb ? 'Steam' : '');
-                    return platform.toLowerCase().includes(term);
-                }
-                
-                // 4. Check Achievements (UPDATED FIX)
-                if (currentSearchType === 'achievement') {
-                    return game.achievements.some(ach => {
-                        // Safely convert properties to strings before lowercasing
-                        const name = String(ach.name || '').toLowerCase();
-                        const description = String(ach.description || '').toLowerCase();
-                        const apiname = String(ach.apiname || '').toLowerCase();
-                        
-                        return name.includes(term) || description.includes(term) || apiname.includes(term);
-                    });
-                }
-
-                return false;
-            });
-        }
-    }
-
     if (sortedGames.length === 0) {
-        let typeLabel = "Game Name";
-        if (currentSearchType === 'appid') typeLabel = "Steam AppID";
-        if (currentSearchType === 'platform') typeLabel = "Platform";
-        if (currentSearchType === 'achievement') typeLabel = "Achievement Info";
+        let typeLabel = getSearchTypeLabel();
 
         html += `<div style="grid-column: 1/-1; text-align: center; color: #8f98a0; padding: 40px; font-size: 1.2em;">
                     No games found matching "${currentSearchTerm}" in <strong>${typeLabel}</strong>
