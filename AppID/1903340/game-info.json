@@ -19,7 +19,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/e62c3a1f5a249fc32fe2652beb97364ddbdd7bce.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "24.8"
+      "percent": "24.7"
     },
     "LUMIERE_MIME": {
       "name": "A Peculiar Encounter",
@@ -55,7 +55,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/134965999d594de3fb44bfb7d702a923ce2c9bd2.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "46.1"
+      "percent": "46.0"
     },
     "PETANK_ALPHA": {
       "name": "Carreau Parfait",
@@ -73,7 +73,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/a7de5c2d546612982ec8dac6307c0bb236deb222.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "27.3"
+      "percent": "27.2"
     },
     "CLEA": {
       "name": "Clea",
@@ -145,7 +145,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/90783dcecfde9c3359113a58688a76bb975734e6.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "14.5"
+      "percent": "14.4"
     },
     "FIRST_AXON": {
       "name": "First Axon",
@@ -154,7 +154,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/5a6b40fe2bfed7a199a70aeeee6b8b32c86ab0da.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "51.7"
+      "percent": "51.6"
     },
     "FLYING_WATERS": {
       "name": "Flying Waters",
@@ -199,7 +199,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/75728078954be60bdb48b3f2a894e4ed1481ee48.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "68.5"
+      "percent": "68.4"
     },
     "ESQUIE_UNLOCK": {
       "name": "Legend",
@@ -235,7 +235,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/2fb6f89282c281f4bc2625aeacebe2bd60d99ae8.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "71.8"
+      "percent": "71.7"
     },
     "LUNE_RELATIONSHIP": {
       "name": "Lune",
@@ -244,7 +244,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/06b4d42d5de4593ba4d411bf3e426a64ad4a981b.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "30.4"
+      "percent": "30.3"
     },
     "MAELLE_RELATIONSHIP": {
       "name": "Maelle",
@@ -280,7 +280,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/d6d7e79ea6cb117920423a2b2578a522c500a5c9.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "57.0"
+      "percent": "56.9"
     },
     "MONOLITH": {
       "name": "Monolith",
@@ -289,7 +289,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/10cefd7d61852b3904f6d1fd326411fe82e3f622.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "49.3"
+      "percent": "49.2"
     },
     "PAINTING_WORKSHOP": {
       "name": "Noir et Blanc",
@@ -307,7 +307,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/3f95d91bfaa0d5de3efd887f200ad347bca668a6.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "54.6"
+      "percent": "54.5"
     },
     "GUSTAVE_OVERCHARGE": {
       "name": "Overcharge",
@@ -334,7 +334,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/c7e20810e253cd4f15809511f7d5ed64e4e91c5b.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "46.5"
+      "percent": "46.4"
     },
     "SIMON": {
       "name": "Peace At Last",
@@ -370,7 +370,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/19a606703fa581feaa8fe8581bc6146f5e77cc1a.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "33.5"
+      "percent": "33.4"
     },
     "NO_DAMAGE_BOSS": {
       "name": "Professional",
@@ -388,7 +388,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/e311c52896785463fefcc65981f1c4fa45694cff.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "32.1"
+      "percent": "32.0"
     },
     "SECOND_AXON": {
       "name": "Second Axon",
@@ -406,7 +406,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/c0626097955c7bab141a4200177ad33aa988baac.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "81.5"
+      "percent": "81.4"
     },
     "SPRONG": {
       "name": "Sprong",
@@ -442,7 +442,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/26b6bf703dfbf65c102b5d2a48b99522c38e9b75.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "43.5"
+      "percent": "43.4"
     },
     "THE_END": {
       "name": "The End",
@@ -451,7 +451,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/d451fa9a94d7fe423e713ccdd7d37cbce6176f90.jpg",
       "hidden": true,
       "group": "Base Game",
-      "percent": "37.6"
+      "percent": "37.5"
     },
     "BREAK": {
       "name": "Time to Spill Some Ink",
@@ -469,7 +469,7 @@
       "icongray": "https://cdn.steamstatic.com/steamcommunity/public/images/apps/1903340/1cdc4c9918c0c80b5853b827f058965d3a2ccb47.jpg",
       "hidden": false,
       "group": "Base Game",
-      "percent": "32.5"
+      "percent": "32.4"
     },
     "WEAPON_FULL_UPGRADE": {
       "name": "Weapon Mastery",
